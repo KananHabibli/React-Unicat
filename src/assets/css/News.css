@@ -1,0 +1,164 @@
+/* MAIN / NEWS */
+
+.news_row{
+    margin-top: 55px;
+}
+
+.news{
+    padding: 100px 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+.news-title{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.news-title h2{
+    font-weight: 700;
+    font-size: 32px;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    color: #384158;
+    margin-bottom: 0;
+}
+
+.news-text{
+    line-height: 1.85;
+    margin-top: 14px;
+}
+
+.col-lg-7{
+    padding-right: 45px;
+}
+
+.col-lg-5{
+    padding-left: 15px;
+}
+
+.col-lg-7 .card{
+    border: none;
+    margin-bottom: 80px;
+}
+
+.col-lg-7 .card-title a{
+    font-size: 20px;
+    font-weight: 700;
+    color: #384158;
+    line-height: 1.4;
+    transition: all 200ms ease;
+}
+
+.col-lg-7 .card-title a:hover{
+    color: #14bdee;
+}
+
+.card-list{
+    margin-top: 11px;
+}
+
+.card-list ul{
+    padding: 0;
+}
+
+.card-list ul li{
+    position: relative;
+    display: inline-block;
+}
+
+.card-list ul li a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #b5b8be;
+    text-transform: uppercase;
+    transition: all 200ms ease
+}
+
+.card-list ul li a:hover{
+    color: #14bdee;
+}
+
+.col-lg-7 .card .card-text{
+    margin-top: 13px;
+}
+
+.card-list ul li:not(:last-of-type)::after {
+    display: inline-block;
+    position: relative;
+    content: '|';
+    margin-left: 14px;
+    margin-right: 11px;
+}
+
+.card-button{
+    margin-top: 20px;
+}
+
+.card-button a{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #384158;
+    text-decoration: underline;
+    transition: all 200ms ease;
+    padding: 0;
+}
+
+.card-button a:hover{
+    color: #14bdee;
+    text-decoration: underline;
+}
+
+.news-item-title a{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.55;
+    color: #384158;
+    transition: all 200ms ease;
+}
+
+.news-item-title a:hover{
+    color: #14bdee;
+}
+
+.news-item:not(:last-child) {
+    padding-bottom: 31px;
+    border-bottom: solid 1px #e5e5e5;
+}
+
+.news-item:not(:first-child)
+{
+	padding-top: 29px;
+}
+
+.news-info-list{
+    margin-top: 11px;
+}
+
+.news-info-list ul{
+    padding: 0;
+}
+
+.news-info-list ul li{
+    position: relative;
+    display: inline-block;
+}
+
+.news-info-list ul li:not(:last-of-type)::after {
+    display: inline-block;
+    position: relative;
+    content: '|';
+    margin-left: 14px;
+    margin-right: 11px;
+}
+
+.news-info-list ul li a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #b5b8be;
+    text-transform: uppercase;
+    transition: all 200ms ease
+}
+
+.news-info-list ul li a:hover{
+    color: #14bdee;
+}

@@ -1,0 +1,23 @@
+.terms{
+    height: 60px;
+    border-top: solid 1px #353a49;
+    padding-top: 10px;
+}
+
+.terms-list li{
+    display: inline-block;
+}
+
+.terms-list li a{
+    font-size: 14px;
+    color: #b5b8be;
+    transition: all 200ms ease;
+}
+
+.terms-list li a:hover{
+    color: #14bdee;
+}
+
+.terms-list li:not(:last-child){
+    margin-right: 50px;
+}

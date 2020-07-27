@@ -1,0 +1,41 @@
+@media (max-width: 992px) {
+
+    .home_search_button{
+        margin-top: 16px;
+    }
+    
+    .event-content-date ul li{
+        display: block;
+    }
+    .card-footer-info:first-child{
+        margin-right: 12px;
+    }
+
+    .courses-cards .card{
+        margin-bottom: 40px
+    }
+
+    .counter-form{
+        height: unset;
+        width: 100%;
+        padding: 40px 60px;
+        margin: 10px 0 80px 0;
+    }
+
+    .milestone:not(:last-child)::after {
+        content: none;
+    }
+
+    .event-interval{
+        margin-right: 15px;
+    }
+
+    .tutor-image{
+        width: 140px;
+        height: 120px;
+    }
+
+    .subscribe-form{
+        margin-top: 20px;
+    }
+}

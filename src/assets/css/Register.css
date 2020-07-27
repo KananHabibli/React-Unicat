@@ -1,0 +1,119 @@
+/* MAIN / REGISTER */
+
+.register{
+    background-image: url('/images/counter_background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.counter{
+    padding: 70px 0;
+}
+
+.counter-title{
+    font-family: 'Roboto Slab', serif;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.counter-text{
+    margin-top: 20px;
+}
+
+.counter-text p{
+    color: #fff;
+}
+
+.milestones{
+    margin-top: 40px;
+}
+
+.milestone{
+    position: relative;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 0.75;
+    color: #14bdee;
+}
+
+.milestone p{
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 14px;
+}
+
+.milestone:not(:last-child)::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -45px;
+    width: 1px;
+    height: 70px;
+    background: rgba(255,255,255,0.2);
+    content: '';
+    transform: rotate(30deg);
+}
+
+
+.counter-form{
+    height: 100%;
+    width: 380px;
+    float: right;
+    padding: 40px 40px;
+    box-shadow: 0px 5px 40px rgba(29,34,47,0.15);
+}
+
+
+.counter-form-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #384158;
+    text-transform: uppercase;
+    line-height: 0.75;
+    margin-bottom: 41px;
+    margin-top: 30px;
+}
+
+.counter-input:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.counter-input {
+    width: 100%;
+    height: 46px;
+    border: solid 1px #e5e5e5;
+    border-radius: 3px;
+    padding-left: 20px;
+    outline: none;
+    color: #384158;
+    font-size: 14px;
+}
+
+.counter-textarea {
+    height: 90px!important;
+    padding-top: 10px;
+}
+
+.counter-submit{
+    width: 100%;
+    height: 46px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    background: #14bdee;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all 200ms ease;
+}
+
+.counter-submit:hover{
+    box-shadow: 0px 5px 40px rgba(29,34,47,0.45);
+}

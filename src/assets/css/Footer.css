@@ -1,0 +1,47 @@
+/* FOOTER */
+
+footer{
+    font-family: 'Roboto Slab', serif;
+    background-image: url('/images/footer_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1e2434;
+    width: 100%;
+    padding-top: 100px;
+}
+
+@media (max-width: 992px) {
+    .footer-social-list ul li{
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-main{
+        margin-bottom: 60px;
+    }
+
+    .footer-about-1 ul{
+        margin-bottom: 60px;
+    }
+
+
+    .footer-links li{
+        display: block;
+        width: auto;
+        margin-bottom: 60px;
+    }
+
+    .terms-list{
+        margin-top: 30px;
+    }
+
+    .terms-list li:not(:last-child){
+        margin-right: 20px;
+    }
+
+    .terms{
+        height: auto;
+        padding: 30px 0;
+    }
+}

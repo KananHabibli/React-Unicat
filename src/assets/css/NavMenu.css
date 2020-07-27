@@ -1,0 +1,80 @@
+.nav-logo{
+    width: auto;
+    height: 80px;
+}
+
+.nav-text{
+    display: block;
+    top: 35%;
+    font-family: 'Roboto Slab', serif;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 0.75;
+	color: #384158;
+    margin-left: 7px;
+    margin-top: 25px;
+    transition: all 300ms ease;
+}
+
+.nav-text span{
+    color: #14bdee;
+}
+
+.nav-list .nav-elem{
+    display: inline-block;
+    position: relative;
+}
+
+.nav-list .nav-elem{
+    margin-left: 44px;
+}
+
+.nav-list .nav-elem.active::after{
+    display: block;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #14bdee;
+	content: '';
+}
+
+.nav-list .nav-elem a{
+    font-size: 19px;
+	font-weight: 700;
+	color: #384158;
+}
+
+.nav-list .nav-elem a:hover, .nav-list .nav-elem.active a{
+    color: #14bdee;
+}
+
+.nav-list, .search-button, .shopping-cart{
+    display: inline-block;
+}
+
+.search-button{
+    margin-left: 46px;
+}
+
+.shopping-cart, .sidebar-open{
+    margin-left: 23px;
+}
+
+.search-button i, .shopping-cart i{
+    font-size: 18px;
+    color: #181818;
+}
+
+.search-button i:hover, .shopping-cart i:hover{
+    cursor: pointer;
+    color: #14bdee;
+}
+
+
+@media (max-width: 992px) {
+    .nav-list, .search-button{
+        display: none;
+    }
+}

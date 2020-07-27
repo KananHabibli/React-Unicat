@@ -1,0 +1,30 @@
+.nav-info{
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    background-color:  #14bdee;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-info ul li{
+    margin-right: 10px;
+}
+
+.nav-register{
+    background-color: #f3f3f3;
+    color: #384158;
+    height: 40px;
+    font-weight: 500;
+}
+
+.nav-register:hover{
+    text-decoration: none;
+    color: #384158;
+}
+
+@media (max-width: 992px) {
+    .nav-info ul{
+        font-size: 12px;
+    }
+}

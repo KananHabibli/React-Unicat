@@ -1,0 +1,62 @@
+/* MAIN / RESOURCES */
+
+.resources{
+    width: 100%;
+    background: #FFFFFF;
+    padding-top: 93px;
+    padding-bottom: 103px;
+}
+
+.resources-title{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    color: #384158;
+    margin-bottom: 0;
+    line-height: 1.2
+}
+
+.resources-content{
+    margin-bottom: 0;
+    line-height: 1.85;
+    color: #76777a; 
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    width: 600px;
+    height: 50px;
+}
+
+.resource-cards{
+    margin-top: 55px;
+}
+
+.resource-card{
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.resource-card:hover
+{
+	box-shadow: 0px 5px 40px rgba(29,34,47,0.15);
+}
+
+.resource-card-title{
+    position: relative;
+    font-size: 20px;
+    margin-top: 23px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    color: #384158;
+    margin-bottom: 0;
+}
+
+.resource-card-content{
+    line-height: 1.85;
+    color: #76777a;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    margin: 0;
+}

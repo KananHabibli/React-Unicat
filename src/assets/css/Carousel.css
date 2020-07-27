@@ -1,0 +1,19 @@
+/* MAIN / PARTNERS */
+.carousel{
+    padding: 30px;
+}
+.owl-carousel .owl-item img{
+    position: relative;
+    width: 110px !important;
+    top: 55%;
+    left: 50%;
+    filter: grayscale(100%);
+}
+
+.owl-carousel .owl-item img:hover{
+    filter: unset;
+}
+
+.owl-dots{
+    display: none;
+}

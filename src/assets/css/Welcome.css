@@ -1,0 +1,49 @@
+/* MAIN / WELCOME */
+
+.welcome{
+    padding: 100px 0;
+}
+
+.welcome-title h1{ 
+    line-height: 1.2;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    color: rgb(56, 65, 88);
+    margin-bottom: 0;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+
+.welcome-content{
+    margin-bottom: 0;
+}
+
+.welcome-cards{
+    margin-top: 56px;
+}
+
+.welcome-cards .card{
+    width: 100%;
+}
+
+.img-container{
+    width: 100%;
+	overflow: hidden;
+}
+
+.welcome-cards img{
+    max-width: 100%;
+    transition: all 2000ms ease;
+}
+
+.welcome-cards .card:hover img
+{
+	transform: scale(1.1);
+}
+
+.card-title a{
+    color: #000;
+}
+
+.card-title a:hover{
+    color: #14bdee;
+}

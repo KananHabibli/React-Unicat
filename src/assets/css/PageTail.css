@@ -1,0 +1,21 @@
+main{
+    margin-top: 125px;
+}
+
+/* MAIN / PAGE TAIL */
+
+.page-tail{
+    background-color: rgb(233, 236, 239);
+}
+
+.breadcrumb{
+    margin-bottom: 0;
+}
+
+.breadcrumb li a{
+    color: #000;
+}
+
+.breadcrumb li a:hover{
+    color: #14bdee;
+}
