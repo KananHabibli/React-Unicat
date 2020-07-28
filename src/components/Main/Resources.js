@@ -1,7 +1,7 @@
 import React from 'react'
 
 import '../../assets/css/Resources.css'
-
+import ResourceCard from './ResourceCard'
 const Resources = props => {
     return (
         <div className="resources">
@@ -13,56 +13,28 @@ const Resources = props => {
                 </p>
                 <div className="row resource-cards">
                     <div className="col-lg-3">
-                        <div className="resource-card mx-auto">
-                            <div className="resource-img d-flex align-items-center justify-content-center">
-                                <img src="/images/icon_1.png" alt="Experts" />
-                            </div>
-                            <h3 className="resource-card-title text-center">
-                                The Experts
-                            </h3>
-                            <p className="resource-card-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                            </p>
-                        </div>
+                        <ResourceCard 
+                            src="/images/icon_1.png" 
+                            alt="Experts" 
+                            title="The Experts"/>
                     </div>
                     <div className="col-lg-3">
-                        <div className="resource-card mx-auto">
-                            <div className="resource-img d-flex align-items-center justify-content-center">
-                                <img src="/images/icon_2.png" alt="Experts" />
-                            </div>
-                            <h3 className="resource-card-title text-center">
-                                Book & Library
-                            </h3>
-                            <p className="resource-card-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                            </p>
-                        </div>
+                        <ResourceCard 
+                        src="/images/icon_2.png" 
+                        alt="Experts" 
+                        title="Book & Library"/>
                     </div>
                     <div className="col-lg-3">
-                        <div className="resource-card mx-auto">
-                            <div className="resource-img d-flex align-items-center justify-content-center">
-                                <img src="/images/icon_3.png" alt="Experts" />
-                            </div>
-                            <h3 className="resource-card-title">
-                                Best Courses
-                            </h3>
-                            <p className="resource-card-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                            </p>
-                        </div>
+                        <ResourceCard 
+                        src="/images/icon_3.png" 
+                        alt="Experts" 
+                        title="Best Courses"/>
                     </div>
                     <div className="col-lg-3">
-                        <div className="resource-card mx-auto">
-                            <div className="resource-img d-flex align-items-center justify-content-center">
-                                <img src="/images/icon_4.png" alt="Experts" />
-                            </div>
-                            <h3 className="resource-card-title text-center">
-                                Award & Reward
-                            </h3>
-                            <p className="resource-card-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                            </p>
-                        </div>
+                        <ResourceCard 
+                        src="/images/icon_4.png" 
+                        alt="Experts" 
+                        title="Award & Reward"/>
                     </div>
                 </div>
             </div>
