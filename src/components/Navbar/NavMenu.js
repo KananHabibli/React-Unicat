@@ -10,25 +10,25 @@ const NavMenu = props => {
                 <div className="row">
                     <div className="col">
                         <div className="d-flex flex-row align-items-center justify-content-start mb-2">
-                            <NavLink to="/" className="nav-logo">
+                            <NavLink activeClassName="" to="/" className="nav-logo">
                                 <div className="nav-text">Unic<span>at</span></div>
                             </NavLink>
                             <div className="ml-auto">
                                 <ul className="nav-list">
-                                    <li className="nav-elem active">
-                                        <NavLink to="/">Home</NavLink>
+                                    <li className="nav-elem">
+                                        <NavLink exact activeClassName="linkActive" to="/">Home</NavLink>
                                     </li>
                                     <li className="nav-elem">
-                                        <NavLink to="/about">About</NavLink>
+                                        <NavLink activeClassName="linkActive" to="/about">About</NavLink>
                                     </li>
                                     <li className="nav-elem">
-                                        <NavLink to="courses.html">Courses</NavLink>
+                                        <NavLink activeClassName="linkActive" to="/courses">Courses</NavLink>
                                     </li>
                                     <li className="nav-elem">
-                                        <NavLink to="blog.html">Blog</NavLink>
+                                        <NavLink activeClassName="linkActive" to="/blog">Blog</NavLink>
                                     </li>
                                     <li className="nav-elem">
-                                        <NavLink to="contact.html">Contact</NavLink>
+                                        <NavLink activeClassName="linkActive" to="/contact">Contact</NavLink>
                                     </li>
                                 </ul>
                                 <div className="search-button">

@@ -29,7 +29,7 @@ export class About extends Component {
         return (
             <main>
                 {/* PAGE TAIL */}
-                <PageTail />
+                <PageTail  title="About"/>
         
                 {/* WELCOME */}
                 <Welcome />

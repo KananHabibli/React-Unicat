@@ -29,7 +29,21 @@
     margin-left: 44px;
 }
 
-.nav-list .nav-elem.active::after{
+.nav-list .nav-elem a{
+    font-size: 19px;
+	font-weight: 700;
+	color: #384158;
+}
+
+.nav-list .nav-elem a:hover{
+    color: #14bdee;
+}
+
+.linkActive{
+    color: #14bdee;
+}
+
+.linkActive::after{
     display: block;
 	position: absolute;
 	bottom: -2px;
@@ -38,16 +52,6 @@
 	height: 2px;
 	background: #14bdee;
 	content: '';
-}
-
-.nav-list .nav-elem a{
-    font-size: 19px;
-	font-weight: 700;
-	color: #384158;
-}
-
-.nav-list .nav-elem a:hover, .nav-list .nav-elem.active a{
-    color: #14bdee;
 }
 
 .nav-list, .search-button, .shopping-cart{

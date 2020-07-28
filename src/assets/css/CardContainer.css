@@ -1,0 +1,78 @@
+.courses-cards{
+    margin-top: 25px;
+}
+
+.courses-cards .col-lg-6:nth-child(even) {
+    padding-left: 30px;
+}
+
+.courses-cards .col-lg-6{
+    margin-bottom: 50px;
+}
+
+.courses-cards .card{
+    width: 100%;
+    border-radius: 6px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 10px rgba(29,34,47,0.1);
+}
+
+.courses-cards .card-title a {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    color: #384158;
+    transition: all 200ms ease;
+}
+
+.courses-cards .card-title a:hover
+{
+	color: #14bdee;
+}
+
+.courses-cards .card-subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    color: #384158;
+    margin-top: 6px;
+}
+
+.courses-cards .card-body {
+    padding-top: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 23px;
+}
+
+.courses-cards .card-text{
+    margin: 15px 0;
+}
+
+.card-footer-info:first-child{
+    margin-right: 18px;
+}
+
+.card-footer-info {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #55555a;
+}
+
+.card-footer-info i {
+    color: #ffc80a;
+}
+
+.card-footer-price {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #14bdee;
+}
+
+.card-footer-price span {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #b5b8be;
+    margin-right: 10px;
+}

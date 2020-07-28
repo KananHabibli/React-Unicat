@@ -1,0 +1,71 @@
+
+.pagination li{
+    display: inline-block;
+    margin-right: 10px;
+    width: 45px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    border: solid 1px rgb(235, 235, 235);
+    text-align: center;
+    transition: all 200ms ease;
+}
+
+.pagination li a{
+    display: block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(117, 118, 134);
+    line-height: 25px;
+    transition: all 200ms ease;
+}
+
+.pagination li:hover .page-link{
+    background-color: #14bdee;
+    border-color: #14bdee;
+    color: #fff;
+}
+
+.page-item.active .page-link {
+    background-color: #14bdee;
+    border-color: #14bdee;
+}
+
+.dropdown-select{
+    display: inline-block;
+    width: 144px;
+    border: solid 1px rgb(236, 237, 238);
+}
+
+.dropdown-select select{
+    position: relative;
+    float: right;
+    width: 50px;
+    height: 40px;
+    appearance: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(56, 65, 88);
+    border: none;
+    outline: none;
+}
+
+.dropdown-select select option{
+    padding-left: 20px;
+    text-align: right;
+}
+
+.dropdown-select span{
+    display: inline-block;
+    margin: 10px 0;
+    color: #000;
+}
+
+.pagination-dropdown .pagination-result{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(56, 65, 88);
+    margin-right: 16px;
+}

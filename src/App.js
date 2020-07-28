@@ -8,6 +8,8 @@ import Footer from './components/Footer/Footer'
 
 import Unicat from './container/Unicat'
 import About from './components/About/About'
+import Courses from './components/Courses/Courses'
+import Blog from './components/Blog/Blog'
 function App() {
   return (
     <Aux>
@@ -15,6 +17,8 @@ function App() {
       <Switch>
         <Route path='/' exact component={Unicat} />
         <Route path='/about' exact component={About} />
+        <Route path='/courses' exact component={Courses} />
+        <Route path='/blog' exact component={Blog} />
       </Switch>
       <Footer />
     </Aux>
