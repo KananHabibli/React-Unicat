@@ -7,7 +7,7 @@ const FooterTerms = props => {
         <div className="terms">
             <div className="d-flex flex-lg-row flex-column align-items-center justify-content-center">
                 <div className="copyright">
-                    Copyright &copy;<span id="year"></span> All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a style={{color: '#fff'}} href="https://colorlib.com" target="_blank">Colorlib</a>
+                    Copyright &copy;<span id="year"></span> All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a style={{color: '#fff'}} rel="noreferrer" href="https://colorlib.com" target="_blank">Colorlib</a>
                 </div>
                 <ul className="terms-list">
                     <li><a href="#">Copyright notification</a></li>

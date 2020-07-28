@@ -58,7 +58,7 @@ class Reason extends Component {
                                     height="350px"
                                     poster="images/course_1.jpg"
                                     data-setup="{}">
-                                    <source src="images/mov_bbb.mp4" type="video/mp4" />
+                                    <source src="/images/mov_bbb.mp4" type="video/mp4" />
                                     <p className="vjs-no-js">
                                     To view this video please enable JavaScript, and consider upgrading to a
                                     web browser that

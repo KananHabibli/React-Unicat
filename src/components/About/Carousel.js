@@ -19,22 +19,22 @@ class Carousel extends Component {
                         autoplay
                     >
                         <div > 
-                            <img src="images/partner_1.png"  alt="" />
+                            <img src="images/partner_1.png"  alt="Partner" />
                         </div>
                         <div >  
-                            <img src="images/partner_2.png"  alt="" />
+                            <img src="images/partner_2.png"  alt="Partner" />
                         </div>
                         <div >  
-                            <img src="images/partner_3.png" alt="" />
+                            <img src="images/partner_3.png" alt="Partner" />
                         </div>
                         <div >  
-                            <img src="images/partner_4.png" alt="" />
+                            <img src="images/partner_4.png" alt="Partner" />
                         </div>
                         <div >  
-                            <img src="images/partner_5.png"  alt="" />
+                            <img src="images/partner_5.png"  alt="Partner" />
                         </div>
                         <div >  
-                            <img src="images/partner_6.png" alt="" />
+                            <img src="images/partner_6.png" alt="Partner" />
                         </div>
                     
                     </OwlCarousel>

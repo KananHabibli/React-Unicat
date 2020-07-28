@@ -9,7 +9,7 @@ export class LatestCoourses extends Component {
                 <div className="latest-title">Latest Courses</div>
                 <ul className="list-unstyled">
                     <li className="media">
-                    <img src="images/latest_1.jpg" className="mr-3" alt />
+                    <img src="images/latest_1.jpg" className="mr-3" alt="Latest Course" />
                     <div className="media-body">
                         <h5 className="mt-0 mb-1">
                             <a href="#">How to Design a Logo a Beginners Course</a>
@@ -18,7 +18,7 @@ export class LatestCoourses extends Component {
                     </div>
                     </li>
                     <li className="media my-4">
-                    <img src="images/latest_2.jpg" className="mr-3" alt />
+                    <img src="images/latest_2.jpg" className="mr-3" alt="Latest Course" />
                     <div className="media-body">
                         <h5 className="mt-0 mb-1">
                             <a href="#">Photography for Beginners MasterclassName</a>
@@ -27,7 +27,7 @@ export class LatestCoourses extends Component {
                     </div>
                     </li>
                     <li className="media">
-                    <img src="images/latest_3.jpg" className="mr-3" alt />
+                    <img src="images/latest_3.jpg" className="mr-3" alt="Latest Course" />
                     <div className="media-body">
                         <h5 className="mt-0 mb-1">
                             <a href="#">The Secrets of Body Language</a>

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import '../../assets/css/Blog.css'
 import PageTail from '../Main/PageTail'
 import BlogContainer from './BlogContainer'
+import Subscribe from '../Main/Subscribe'
 export class Blog extends Component {
     render() {
         return (
@@ -26,25 +27,7 @@ export class Blog extends Component {
 
 
             {/* SUBSCRIBE */}
-            <div className="subscribe">
-                <div className="container">
-                    <div className="d-flex flex-lg-row flex-column align-items-center justify-content-start">
-                        <div className="subscribe-info text-lg-left text-center">
-                            <div className="subscribe-info-title">
-                                sign up for news and offers
-                            </div>
-                            <div className="subscribe-info-content">
-                                Subcribe to lastest smartphones news & great deals we offer
-                            </div>
-                        </div>
-                        <div className="subscribe-form ml-lg-auto">
-                            <form action="">
-                                <input type="text" placeholder="Your Email" /><button >Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Subscribe />
         </main>
         )
     }

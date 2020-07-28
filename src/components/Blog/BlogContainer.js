@@ -18,7 +18,7 @@ export class BlogContainer extends Component {
             <div className="blog-container">
                 <div className="blog-post" style={{position: 'absolute',top: '0',left: '0'}}>
                     <div className="card">
-                        <img src="images/blog_1.jpg" className="card-img-top" alt />
+                        <img src="images/blog_1.jpg" className="card-img-top" alt="Blog 1" />
                         <div className="card-body">
                         <h5 className="card-title">
                             <a href="#">Here's What You Need to Know About Online Testing</a>
@@ -88,7 +88,7 @@ export class BlogContainer extends Component {
                 </div>
                 <div className="blog-post" style={{position: 'absolute',top: '450px',left: '0'}}>
                     <div className="card">
-                        <img src="images/blog_2.jpg" className="card-img-top" alt />
+                        <img src="images/blog_2.jpg" className="card-img-top" alt="Blog 2" />
                         <div className="card-body">
                         <h5 className="card-title">
                             <a href="#">Here's What You Need to Know About Online Testing</a>
@@ -107,7 +107,7 @@ export class BlogContainer extends Component {
                 </div>
                 <div className="blog-post" style={{position: 'absolute',top: '230px',left: '390px'}}>
                     <div className="card">
-                        <img src="images/blog_3.jpg" className="card-img-top" alt />
+                        <img src="images/blog_3.jpg" className="card-img-top" alt="Blog 3" />
                         <div className="card-body">
                         <h5 className="card-title">
                             <a href="#">Here's What You Need to Know About Online Testing</a>
@@ -126,7 +126,7 @@ export class BlogContainer extends Component {
                 </div>
                 <div className="blog-post" style={{position: 'absolute',top: '450px',left: '780px'}}>
                     <div className="card">
-                        <img src="images/blog_4.jpg" className="card-img-top" alt />
+                        <img src="images/blog_4.jpg" className="card-img-top" alt="Blog 4" />
                         <div className="card-body">
                         <h5 className="card-title">
                             <a href="#">Here's What You Need to Know About Online Testing</a>
@@ -145,7 +145,7 @@ export class BlogContainer extends Component {
                 </div>
                 <div className="blog-post" style={{position: 'absolute',top: '720px',left: '390px'}}>
                     <div className="card">
-                        <img src="images/blog_3.jpg" className="card-img-top" alt />
+                        <img src="images/blog_3.jpg" className="card-img-top" alt="Blog 5" />
                         <div className="card-body">
                         <h5 className="card-title">
                             <a href="#">Here's What You Need to Know About Online Testing</a>

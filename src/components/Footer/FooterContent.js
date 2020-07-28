@@ -91,12 +91,12 @@ const FooterContent = props => {
                         <ul className="mobile-list">
                             <li>
                                 <a href="#">
-                                    <img src="images/mobile_1.png" alt="" />
+                                    <img src="images/mobile_1.png" width="150" alt="Mobile link" />
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="images/mobile_2.png" alt="" />
+                                    <img src="images/mobile_2.png" width="150" alt="Mobile link" />
                                 </a>
                             </li>
                         </ul>
