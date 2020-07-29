@@ -9,22 +9,26 @@ export class MileStone extends Component {
         visible: false
     }
 
+    
+
     render() {
         return (
             <VizSensor
                 onChange={(isVisible) => {
-                    this.setState({visible: isVisible})
+                    if(!this.state.visible && isVisible ){
+                        this.setState({visible: isVisible})
+                    }
                     console.log(this.state.visible)
                 }}
             >
-                <CountUp
+                    <CountUp
                     start={0}
-                    end={this.props.end}
+                    end={this.state.visible ? this.props.end : 0}
                     suffix={this.props.suffix}
                     duration={2}
                     onEnd={() => console.log('Ended! 👏')}
                     onStart={() => console.log('Started! 💨')}
-                />
+                    />
             </VizSensor>
         )
     }
