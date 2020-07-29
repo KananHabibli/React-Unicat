@@ -49,7 +49,6 @@ class Navbar extends Component {
 
     scrollHeader = () => {
         if($(window).scrollTop() > 100){
-            console.log('lmao')
             this.setState({headerClass: 'scrolled'})
         } else {
             this.setState({headerClass: ''})

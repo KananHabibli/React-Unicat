@@ -26,7 +26,7 @@ class CarouselItem extends Component {
           }}
         >
           <div {...{ className: 'accordion-item__line' }}>
-            <p {...{ className: 'accordion-item__icon' }}> <i class="fas fa-chevron-right"></i> </p>
+            <p {...{ className: 'accordion-item__icon' }}> <i className="fas fa-chevron-right"></i> </p>
             <h3 {...{ className: 'accordion-item__title' }}>
               {title}
             </h3>
