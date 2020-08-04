@@ -1,0 +1,124 @@
+.main-login {
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+.register-background{
+    background-image: url('/images/gallery_4_large.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 65%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.register-background::before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(20, 189, 238);
+    opacity: 0.8;
+}
+
+.register-form{
+    background-color: #ffffff;
+    height: 100vh;
+    width: 35%;
+}
+
+.register-form-title{
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(56, 65, 88);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.register-form form > div:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.register-form form{
+    width: 80%;
+    margin: 50px auto 0 auto;
+}
+
+.register-form form label{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(56, 65, 88);
+    margin-bottom: 12px;
+}
+
+.register-form-input{
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-bottom: solid 1px rgb(217, 217, 217);
+    padding-left: 10px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(44, 49, 69);
+}
+
+.register-form-input::placeholder {
+    opacity: 0.5;
+}
+
+.register-form-input:focus{
+    border-bottom: solid 1px #14bdee
+}
+
+.button-container{
+    width: 100%;
+}
+
+.register-button{
+    display: block;
+    width: 45%;
+    height: 50px;
+    background: rgb(20, 189, 238);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin: 15px auto 0 auto;
+    text-align: center;
+}
+
+.register-button p{
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+.register-button:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+
+    .register-button{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+
+}

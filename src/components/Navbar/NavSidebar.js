@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import '../../assets/css/NavSidebar.css'
 
@@ -17,19 +18,19 @@ const NavSidebar = props => {
                 </form>
                 <ul className="sidebar-list">
                     <li className="sidebar-elem">
-                        <a href="index.html">Home</a>
+                        <NavLink to="/">Home</NavLink>
                     </li>
                     <li className="sidebar-elem">
-                        <a href="about.html">About</a>
+                        <NavLink to="/about">About</NavLink>
                     </li>
                     <li className="sidebar-elem">
-                        <a href="courses.html">Courses</a>
+                        <NavLink to="/courses">Courses</NavLink>
                     </li>
                     <li className="sidebar-elem">
-                        <a href="blog.html">Blog</a>
+                        <NavLink to="/blog">Blog</NavLink>
                     </li>
                     <li className="sidebar-elem">
-                        <a href="contact.html">Contact</a>
+                        <NavLink to="/contact">Contact</NavLink>
                     </li>
                 </ul>
             </div>

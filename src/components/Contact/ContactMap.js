@@ -20,12 +20,12 @@ export class ContactMap extends Component {
                 <div class="map">
                     <div id="google_map" class="google_map">
                         <div class="map_container">
-                        <Map
-                        google={this.props.google}
-                        zoom={8}
-                        style={mapStyles}
-                        initialCenter={{ lat: 40.3945713, lng: 49.7847483}}
-                    />
+                            <Map
+                            google={this.props.google}
+                            zoom={8}
+                            style={mapStyles}
+                            initialCenter={{ lat: 40.3945713, lng: 49.7847483}}
+                            />
                         </div>
                     </div>
                 </div>

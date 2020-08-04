@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom'
 import '../../assets/css/NavInfo.css'
 
 const NavInfo = props => {
@@ -17,7 +17,7 @@ const NavInfo = props => {
                         </div>
                     </div>
                     <div className="col-4">
-                        <a href="register.html" className="float-right nav-register py-2 px-4">Register or Login</a>
+                        <NavLink to="/login" className="float-right nav-register py-2 px-4">Register or Login</NavLink>
                     </div>
                 </div>
             </div>

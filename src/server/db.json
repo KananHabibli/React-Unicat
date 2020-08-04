@@ -1,0 +1,141 @@
+{
+    "courses": [
+        {
+            "id": "1",
+            "course": "Machine Learning",
+            "src": "https://www.alphagamma.eu/wp-content/uploads/2019/10/alphagamma-Understanding-Artificial-Intelligence-Machine-Learning-and-Deep-Learning-entrepreneurship.jpg",
+            "price": "$29.99",
+            "tutor": "John Doe",
+            "students": 12964,
+            "rating": 4.6
+        },
+        {
+            "id": "2",
+            "course": "Ios 11 & Swift 4",
+            "src": "https://img-a.udemycdn.com/course/240x135/1289478_5831_9.jpg",
+            "price": "$12.99",
+            "tutor": "Angela Yu",
+            "students": 10274,
+            "rating": 4.7
+        },
+        {
+            "id": "3",
+            "course": "React - The Complete Guide",
+            "src": "https://img-a.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
+            "price": "$12.99",
+            "tutor": "Maximilian Schwarzmüller",
+            "students": 9642,
+            "rating": 4.2
+        },
+        {
+            "id": "4",
+            "course": "Linux Command Line Basics",
+            "src": "https://img-a.udemycdn.com/course/240x135/95246_69f4_23.jpg",
+            "price": "$15.99",
+            "tutor": "Ahmed Alkabary"
+        },
+        {
+            "id": "5",
+            "course": "Learn Ethical Hacking From Scratch",
+            "src": "https://img-a.udemycdn.com/course/240x135/857010_8239_2.jpg",
+            "price": "$15.99",
+            "tutor": "Ahmed Alkabary",
+            "students": 8246,
+            "rating": 4.0
+        },
+        {
+            "id": "6",
+            "course": "AWS Certified Developer",
+            "src": "https://img-a.udemycdn.com/course/240x135/393306_f2a5_6.jpg",
+            "price": "$18.99",
+            "tutor": "Ahmed Alkabary",
+            "students": 3592,
+            "rating": 3.8
+        },
+        {
+            "id": "7",
+            "course": "Machine Learning",
+            "src": "https://www.alphagamma.eu/wp-content/uploads/2019/10/alphagamma-Understanding-Artificial-Intelligence-Machine-Learning-and-Deep-Learning-entrepreneurship.jpg",
+            "price": "$29.99",
+            "tutor": "John Doe",
+            "students": 15647,
+            "rating": 4.9
+        },
+        {
+            "id": "8",
+            "course": "Ios 11 & Swift 4",
+            "src": "https://img-a.udemycdn.com/course/240x135/1289478_5831_9.jpg",
+            "price": "$12.99",
+            "tutor": "Angela Yu",
+            "students": 12964,
+            "rating": 4.3
+        },
+        {
+            "id": "9",
+            "course": "React - The Complete Guide",
+            "src": "https://img-a.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
+            "price": "$12.99",
+            "tutor": "Maximilian Schwarzmüller",
+            "students": 6782,
+            "rating": 3.9
+        },
+        {
+            "id": "10",
+            "course": "Linux Command Line Basics",
+            "src": "https://img-a.udemycdn.com/course/240x135/95246_69f4_23.jpg",
+            "price": "$15.99",
+            "tutor": "Ahmed Alkabary",
+            "students": 7863,
+            "rating": 4.1
+        },
+        {
+            "id": "11",
+            "course": "Learn Ethical Hacking From Scratch",
+            "src": "https://img-a.udemycdn.com/course/240x135/857010_8239_2.jpg",
+            "price": "$15.99",
+            "tutor": "Faye Ellis",
+            "students": 12964,
+            "rating": 4.6
+        },
+        {
+            "id": "12",
+            "course": "AWS Certified Developer",
+            "src": "https://img-a.udemycdn.com/course/240x135/393306_f2a5_6.jpg",
+            "price": "$18.99",
+            "tutor": "Ahmed Alkabary",
+            "students": 12964,
+            "rating": 4.6
+        }
+        
+    ],
+    "events": [
+        {
+            "title": "Which Country Handles Student Debt?",
+            "day": "21",
+            "month": "Aug",
+            "address": "25 New York City",
+            "time": "15:00 - 19:00"
+        },
+        {
+            "title": "Repaying your student loans (Winter 2017-2018)",
+            "day": "27",
+            "month": "Aug",
+            "address": "25 Brooklyn City",
+            "time": "09.00 - 17.30"
+        },
+        {
+            "title": "Which Country Handles Student Debt?",
+            "day": "01",
+            "month": "Sep",
+            "address": "25 New York City",
+            "time": "15:00 - 19:00"
+        }
+    ],
+    "categories": [
+        "Art & Desing",
+        "Business",
+        "IT & Software",
+        "Languages",
+        "Programming"
+    ]
+}

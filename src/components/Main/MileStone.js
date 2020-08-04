@@ -7,9 +7,7 @@ export class MileStone extends Component {
 
     state = {
         visible: false
-    }
-
-    
+    }    
 
     render() {
         return (
@@ -19,16 +17,14 @@ export class MileStone extends Component {
                         this.setState({visible: isVisible})
                     }
                     console.log(this.state.visible)
-                }}
-            >
+                }}>
                     <CountUp
                     start={0}
                     end={this.state.visible ? this.props.end : 0}
                     suffix={this.props.suffix}
                     duration={2}
                     onEnd={() => console.log('Ended! 👏')}
-                    onStart={() => console.log('Started! 💨')}
-                    />
+                    onStart={() => console.log('Started! 💨')} />
             </VizSensor>
         )
     }

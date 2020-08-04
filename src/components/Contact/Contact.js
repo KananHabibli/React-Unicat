@@ -12,9 +12,7 @@ export class Contact extends Component {
         return (
             <main>
                 {/* PAGE TAIL*/}
-                <PageTail title="Contact" />
-
-                
+                <PageTail title="Contact" />                
 
                 {/* CONTACT */}
                 <div className="contact">

@@ -39,13 +39,13 @@ class Reason extends Component {
                             <div className="col-lg-6">
                                 <div {...{ className: 'wrapper' }}>
                                     <ul {...{ className: 'accordion-list' }}>
-                                    {data.map((data, key) => {
-                                        return (
-                                        <li {...{ className: 'accordion-list__item', key }}>
-                                            <CarouselItem {...data} />
-                                        </li>
-                                        )
-                                    })}
+                                        {data.map((data, key) => {
+                                            return (
+                                            <li {...{ className: 'accordion-list__item', key }}>
+                                                <CarouselItem {...data} />
+                                            </li>
+                                            )
+                                        })}
                                     </ul>
                                 </div>
                             </div>
