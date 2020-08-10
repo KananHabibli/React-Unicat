@@ -2,6 +2,8 @@ import React from 'react'
 
 import '../../assets/css/Courses.css'
 import CourseCard from '../Courses/CourseCard'
+
+
 const Courses = props => {
     return (
         <div className="courses">

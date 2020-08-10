@@ -8,46 +8,28 @@ import PageTail from '../Main/PageTail'
 import Welcome from './Welcome'
 import Reason from './Reason'
 import Carousel from './Carousel'
-export class About extends Component {
-
-    // componentDidMount() {
-    //     $( "#accordion" ).accordion({
-    //         collapsible: true
-    //     });
-
-    //     $(".owl-carousel").owlCarousel({
-    //         items:5,
-    //         loop:true,
-    //         margin:5,
-    //         autoplay:true,
-    //         autoplayTimeout:2000,
-    //         autoplayHoverPause:true
-    //     });
-    // }
-
-    render() {
-        return (
-            <main>
-                {/* PAGE TAIL */}
-                <PageTail  title="About"/>
+const About = () => {
+    return (
+        <main>
+            {/* PAGE TAIL */}
+            <PageTail  title="About"/>
+    
+            {/* WELCOME */}
+            <Welcome />
+    
+            {/* REASON */}
+            <Reason />
+    
+            {/* TUTORS */}
+            <Tutors />
+    
+            {/* REGISTER */}
+            <Register />
         
-                {/* WELCOME */}
-                <Welcome />
-        
-                {/* REASON */}
-                <Reason />
-        
-                {/* TUTORS */}
-                <Tutors />
-        
-                {/* REGISTER */}
-                <Register />
-            
-                {/* CAROUSEL */}
-                <Carousel />
-            </main>
-        )
-    }
+            {/* CAROUSEL */}
+            <Carousel />
+        </main>
+    )
 }
 
 export default About

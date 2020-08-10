@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import '../../assets/css/GeneralCourses.css'
 
@@ -12,47 +12,47 @@ import Subscribe from '../Main/Subscribe'
 import Instagram from './Instagram'
 import Tags from './Tags'
 import Banner from './Banner'
-export class Courses extends Component {
-    render() {
-        return (
-            <div>
-                {/*PAGE TAIL*/}
-                <PageTail title="Courses" />
 
-                {/* COURSES */} 
-                <div style={{padding: '100px 0', width: '100%'}}>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-8">
-                                <CourseSearch />
-                                <CardContainer />
-                                <Pagination />
-                            </div>
-                            <div className="col-lg-4">
-                                {/* CATEGORIES */} 
-                                <Categories />
 
-                                {/* LATEST COURSES */}
-                                <LatestCourses />
+const Courses = props => {
+    return (
+        <div>
+            {/*PAGE TAIL*/}
+            <PageTail title="Courses" />
 
-                                {/* INSTAGRAM */} 
-                                <Instagram />
-                
-                                {/* TAGS */}
-                                <Tags />
-                                
-                                {/* BANNER */}
-                                <Banner />
-                            </div>
+            {/* COURSES */} 
+            <div style={{padding: '100px 0', width: '100%'}}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-8">
+                            <CourseSearch />
+                            <CardContainer />
+                            <Pagination />
+                        </div>
+                        <div className="col-lg-4">
+                            {/* CATEGORIES */} 
+                            <Categories />
+
+                            {/* LATEST COURSES */}
+                            <LatestCourses />
+
+                            {/* INSTAGRAM */} 
+                            <Instagram />
+            
+                            {/* TAGS */}
+                            <Tags />
+                            
+                            {/* BANNER */}
+                            <Banner />
                         </div>
                     </div>
                 </div>
-
-                {/* SUBSCRIBE */}
-                <Subscribe />
             </div>
-        )
-    }
+
+            {/* SUBSCRIBE */}
+            <Subscribe />
+        </div>
+    )
 }
 
 export default Courses

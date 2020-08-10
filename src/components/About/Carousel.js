@@ -4,44 +4,44 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-class Carousel extends Component {
-    render() {
-        return (
-            <div className="carousel">
-                <div className="container">
-                    <OwlCarousel
-                        items={5}
-                        autoplayTimeout={2000}
-                        autoplayHoverPause
-                        className="owl-theme"
-                        loop
-                        margin={5}
-                        autoplay
-                    >
-                        <div > 
-                            <img src="images/partner_1.png"  alt="Partner" />
-                        </div>
-                        <div >  
-                            <img src="images/partner_2.png"  alt="Partner" />
-                        </div>
-                        <div >  
-                            <img src="images/partner_3.png" alt="Partner" />
-                        </div>
-                        <div >  
-                            <img src="images/partner_4.png" alt="Partner" />
-                        </div>
-                        <div >  
-                            <img src="images/partner_5.png"  alt="Partner" />
-                        </div>
-                        <div >  
-                            <img src="images/partner_6.png" alt="Partner" />
-                        </div>
-                    
-                    </OwlCarousel>
-                </div>
-            </div>
-        )
+import { partnerList } from '../../utils/partnerList'
+import CarouselItem from './CarouselItem'
+
+const Carousel = () => {
+
+    const options = {
+        autoplay: true,
+        loop: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: false,
+        responsive:{
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 2,
+            },
+            1000: {
+                items: 5,
+            },
+        },
     }
+
+    return (
+        <div className="carousel">
+            <div className="container">
+                <OwlCarousel
+                    className="owl-theme"
+                    {...options}
+                >
+                {partnerList.map((partner, index) => (
+                    <CarouselItem key={index} src={partner.src} alt={partner.alt} />
+                ))}
+                
+                </OwlCarousel>
+            </div>
+        </div>
+    )
 }
 
 export default Carousel

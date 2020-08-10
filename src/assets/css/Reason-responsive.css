@@ -1,0 +1,12 @@
+@media (max-width: 992px){
+    .wrapper .accordion-list{
+        margin: 25px auto;
+    }
+
+    .video-js{
+        display: block;
+        margin: 20px auto;
+        width: 400px;
+        height: 250px;
+    }
+}

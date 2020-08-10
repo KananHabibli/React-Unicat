@@ -2,8 +2,6 @@ import React from 'react'
 
 import '../../assets/css/Main.css'
 
-import $ from 'jquery'
-
 import MainCarousel from './MainCarousel'
 import Resources from './Resources'
 import Courses from './Courses'
@@ -13,40 +11,37 @@ import Tutors from './Tutors'
 import News from './News'
 import Subscribe from './Subscribe'
 
-class Main extends React.Component{
+const Main = props =>{
+    return (
+        <main>
 
-    render() {
-        return (
-            <main>
+            {/* MAIN CAROUSEL */}
+            <MainCarousel />
 
-                {/* MAIN CAROUSEL */}
-                <MainCarousel />
+            {/* RESOURCES */}
+            <Resources />
 
-                {/* RESOURCES */}
-                <Resources />
+            { /* COURSES */ }
+            <Courses />
 
-                { /* COURSES */ }
-                <Courses />
+            {/* REGISTER */}
+            <Register />
 
-                {/* REGISTER */}
-                <Register />
+            { /* EVENTS */} 
+            <Events />
 
-                { /* EVENTS */} 
-                <Events />
+            {/* TUTORS */}
+            <Tutors />
 
-                {/* TUTORS */}
-                <Tutors />
+            {/* News */} 
+            <News />
 
-                {/* News */} 
-                <News />
+            {/* SUBSCRIBE */}
+            <Subscribe />
+            
+        </main>
 
-                {/* SUBSCRIBE */}
-                <Subscribe />
-                
-            </main>
-
-        )
-    }
+    )
 }
 
 

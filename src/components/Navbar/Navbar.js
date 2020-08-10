@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import $ from 'jquery'
 
 import '../../assets/css/Navbar.css'
@@ -8,19 +8,12 @@ import NavMenu from './NavMenu'
 import NavSearch from './NavSearch'
 import NavSidebar from './NavSidebar'
 
-class Navbar extends Component {
+const Navbar = props => {
 
-    state = {
-        headerClass: ''
-    }
+    const [headerClass, changeClass] = useState('')
 
-    componentDidMount() {
+    useEffect(() => {
         $('.search-box').hide()
-
-        $('#subscribe').click(function(e){
-            e.preventDefault()
-            window.location.href="/register.html";
-        });
 
         const searchButton = $('.search-button')
         searchButton.click(function(){
@@ -37,44 +30,40 @@ class Navbar extends Component {
 
         $(window).on('resize', () =>
         {
-            this.scrollHeader();
+            scrollHeader();
         });
 
         $(document).on('scroll', () =>
         {
-            this.scrollHeader();
-        });
-    }
+            scrollHeader();
+        })
+    })
     
 
-    scrollHeader = () => {
+    const scrollHeader = () => {
         if($(window).scrollTop() > 100){
-            this.setState({headerClass: 'scrolled'})
+            changeClass('scrolled')
         } else {
-            this.setState({headerClass: ''})
+            changeClass('')
         }
     }
+    return (
+        <header className={headerClass}>
+        
+            {/* HEADER / INFO */}
+            <NavInfo />
 
-
-    render() {
-        return (
-            <header className={this.state.headerClass}>
+            {/* HEADER MAIN NAVBAR */}
+            <NavMenu />
             
-                {/* HEADER / INFO */}
-                <NavInfo />
-    
-                {/* HEADER MAIN NAVBAR */}
-                <NavMenu />
-                
-                {/* HEADER SEARCH BAR */}
-                <NavSearch />
-                
-                {/* HEADER SIDEBAR */}
-                <NavSidebar />
+            {/* HEADER SEARCH BAR */}
+            <NavSearch />
+            
+            {/* HEADER SIDEBAR */}
+            <NavSidebar />
 
-            </header>
-        )
-    }
+        </header>
+    )
 }
 
 export default Navbar

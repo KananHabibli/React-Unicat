@@ -1,44 +1,34 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import "../../assets/css/LatestCourses.css"
+import MediaCard from './MediaCard'
 
-export class LatestCoourses extends Component {
-    render() {
-        return (
-            <div className="latest-courses">
-                <div className="latest-title">Latest Courses</div>
-                <ul className="list-unstyled">
-                    <li className="media">
-                    <img src="images/latest_1.jpg" className="mr-3" alt="Latest Course" />
-                    <div className="media-body">
-                        <h5 className="mt-0 mb-1">
-                            <a href="#">How to Design a Logo a Beginners Course</a>
-                        </h5>
-                        <span>Free</span>
-                    </div>
-                    </li>
-                    <li className="media my-4">
-                    <img src="images/latest_2.jpg" className="mr-3" alt="Latest Course" />
-                    <div className="media-body">
-                        <h5 className="mt-0 mb-1">
-                            <a href="#">Photography for Beginners MasterclassName</a>
-                        </h5>
-                        <span>$170</span>
-                    </div>
-                    </li>
-                    <li className="media">
-                    <img src="images/latest_3.jpg" className="mr-3" alt="Latest Course" />
-                    <div className="media-body">
-                        <h5 className="mt-0 mb-1">
-                            <a href="#">The Secrets of Body Language</a>
-                        </h5>
-                        <span>$220</span>
-                    </div>
-                    </li>
-                </ul>
-            </div>
-        )
-    }
+const LatestCoourses = props => {
+    return (
+        <div className="latest-courses">
+            <div className="latest-title">Latest Courses</div>
+            <ul className="list-unstyled">
+                <MediaCard
+                    src="images/latest_1.jpg"
+                    alt="Latest Course 1"
+                    title="How to Design a Logo a Beginners Course"
+                    price="Free"
+                />
+                <MediaCard
+                    src="images/latest_2.jpg"
+                    alt="Latest Course 2"
+                    title="Photography for Beginners MasterclassName"
+                    price="170"
+                />
+                <MediaCard
+                    src="images/latest_3.jpg"
+                    alt="Latest Course 3"
+                    title="The Secrets of Body Language"
+                    price="220"
+                />
+            </ul>
+        </div>
+    )
 }
 
 export default LatestCoourses
