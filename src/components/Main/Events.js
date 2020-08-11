@@ -1,9 +1,22 @@
-import React from 'react'
-import EventCard from './EventCard'
+import React, { useState, useEffect} from 'react'
+import axios from 'axios'
 
 import '../../assets/css/Events.css'
+import EventCard from './EventCard'
+
 
 const Events = props => {
+
+    const [events, updateEvents] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/events')
+            .then(res => {
+                updateEvents(res.data)
+            })
+    }, [])
+
+
     return (
         <div className="events">
             <div className="container">
@@ -16,36 +29,19 @@ const Events = props => {
                 </div>
                 <div className="events-cards">
                     <div className="row">
-                        <div className="col-lg-4">
-                           <EventCard 
-                            src="/images/event_1.jpg" 
-                            alt="Event 1"
-                            day="21"
-                            month="Aug"
-                            title="Which Country Handles Student Debt?"
-                            hours="15:00 - 19:00"
-                            address="25 New York City" />
-                        </div>
-                        <div className="col-lg-4">
+                    {console.log(events)}
+                        {events.map((event, index) => (
+                            <div key={index} className="col-lg-4">
                             <EventCard 
-                                src="/images/event_2.jpg" 
-                                alt="Event 2"
-                                day="27"
-                                month="Aug"
-                                title="Repaying your student loans (Winter 2017-2018)"
-                                hours="09.00 - 17.30"
-                                address="25 Brooklyn City" />
-                        </div>
-                        <div className="col-lg-4">
-                            <EventCard 
-                            src="/images/event_3.jpg" 
-                            alt="Event 3"
-                            day="01"
-                            month="Sep"
-                            title="Which Country Handles Student Debt?"
-                            hours="15:00 - 19:00"
-                            address="25 Brooklyn City" />
-                        </div>
+                                src={event.src} 
+                                alt={event.alt}
+                                day={event.day}
+                                month={event.month}
+                                title={event.title}
+                                hours={event.time}
+                                address={event.address} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

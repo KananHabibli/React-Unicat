@@ -1,13 +1,25 @@
-import React, { Component } from 'react'
-import '../../assets/css/Carousel.css'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-import { partnerList } from '../../utils/partnerList'
+
+import '../../assets/css/Carousel.css'
 import CarouselItem from './CarouselItem'
 
 const Carousel = () => {
+
+    const [partners, updatePartners] = useState([])
+
+    useEffect(() => {
+        axios.get("http://localhost:5000/partnerList")
+            .then(res => {
+                updatePartners(res.data)
+                console.log(res.data)
+            })
+            .catch(e => console.log(e))
+    }, [])
 
     const options = {
         autoplay: true,
@@ -34,9 +46,11 @@ const Carousel = () => {
                     className="owl-theme"
                     {...options}
                 >
-                {partnerList.map((partner, index) => (
+                {partners.map((partner, index) => {
+                    console.log(partner)
+                    return(
                     <CarouselItem key={index} src={partner.src} alt={partner.alt} />
-                ))}
+                )})}
                 
                 </OwlCarousel>
             </div>

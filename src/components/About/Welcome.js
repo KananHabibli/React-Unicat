@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
+import axios from 'axios'
+
 import '../../assets/css/Welcome.css'
 import WelcomeCard from './WelcomeCard'
-import { about } from '../../utils/about'
 
 const Welcome = props => {
+
+    const [about, updateAbout] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/about')
+            .then(res => {
+                updateAbout(res.data)
+            })
+    }, [])
     return (
         <div className="welcome">
             <div className="container">

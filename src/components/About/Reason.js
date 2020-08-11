@@ -1,11 +1,23 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+
 
 import '../../assets/css/Reason.css'
 import '../../assets/css/Reason-responsive.css'
 import AccordionItem from './AccordionItem'
-import { accordionData } from '../../utils/accordionData'
+// import { accordionData } from '../../utils/accordionData'
 
 const Reason = props => {
+
+    const [data, updateData] = useState([])
+
+    useEffect(() => {
+        axios.get("http://localhost:5000/accordionData")
+            .then(res => {
+                updateData(res.data)
+            })
+    }, [])
+
 
     return (
         <div className="reason">
@@ -23,7 +35,7 @@ const Reason = props => {
                         <div className="col-lg-6">
                             <div {...{ className: 'wrapper' }}>
                                 <ul {...{ className: 'accordion-list' }}>
-                                    {accordionData.map((data, key) => {
+                                    {data.map((data, key) => {
                                         return (
                                         <li {...{ className: 'accordion-list__item', key }}>
                                             <AccordionItem {...data} />

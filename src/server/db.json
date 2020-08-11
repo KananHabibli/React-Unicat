@@ -32,7 +32,9 @@
             "course": "Linux Command Line Basics",
             "src": "https://img-a.udemycdn.com/course/240x135/95246_69f4_23.jpg",
             "price": "$15.99",
-            "tutor": "Ahmed Alkabary"
+            "tutor": "Ahmed Alkabary",
+            "students": 12365,
+            "rating": 4.6
         },
         {
             "id": "5",
@@ -114,21 +116,27 @@
             "day": "21",
             "month": "Aug",
             "address": "25 New York City",
-            "time": "15:00 - 19:00"
+            "time": "15:00 - 19:00",
+            "src": "/images/event_1.jpg",
+            "alt": "Event 1"
         },
         {
             "title": "Repaying your student loans (Winter 2017-2018)",
             "day": "27",
             "month": "Aug",
             "address": "25 Brooklyn City",
-            "time": "09.00 - 17.30"
+            "time": "09.00 - 17.30",
+            "src": "/images/event_2.jpg",
+            "alt": "Event 2"
         },
         {
             "title": "Which Country Handles Student Debt?",
             "day": "01",
             "month": "Sep",
             "address": "25 New York City",
-            "time": "15:00 - 19:00"
+            "time": "15:00 - 19:00",
+            "src": "/images/event_3.jpg",
+            "alt": "Event 3"
         }
     ],
     "categories": [
@@ -137,5 +145,76 @@
         "IT & Software",
         "Languages",
         "Programming"
+    ],
+    "prizeInterval": [
+        "from $0 to $20",
+        "from $20 to $40",
+        "from $40 to $60",
+        "from $90 to $80",
+        "more than $80"
+    ],
+    "accordionData" : [
+        {
+          "title": "Award for Best School 2017",
+          "paragraph": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+          "title": "You are learning from the best",
+          "paragraph": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+          "title": "Our degrees are recognized worldwide",
+          "paragraph": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+          "title": "We encourage out students to go global",
+          "paragraph": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        }
+    ],
+    "about" : [
+        {
+            "src": "images/about_1.jpg",
+            "alt": "About 1",
+            "title": "Our Stories",
+            "text": "Lorem ipsum dolor sit , consectet adipisi elit, sed do eiusmod tempor for enim en consectet adipisi elit, sed do consectet adipisi elit, sed doadesg."
+        },
+        {
+            "src": "images/about_2.jpg",
+            "alt": "About 2",
+            "title": "Our Mission",
+            "text": "Lorem ipsum dolor sit , consectet adipisi elit, sed do eiusmod tempor for enim en consectet adipisi elit, sed do consectet adipisi elit, sed doadesg."
+        },
+        {
+            "src": "images/about_3.jpg",
+            "alt": "About 3",
+            "title": "Our Vision",
+            "text": "Lorem ipsum dolor sit , consectet adipisi elit, sed do eiusmod tempor for enim en consectet adipisi elit, sed do consectet adipisi elit, sed doadesg."
+        }
+    ],
+    "partnerList" : [
+        {
+            "src": "images/partner_1.png",
+            "alt": "Partner 1"
+        },
+        {
+            "src": "images/partner_2.png",
+            "alt": "Partner 2"
+        },
+        {
+            "src": "images/partner_3.png",
+            "alt": "Partner 3"
+        },
+        {
+            "src": "images/partner_4.png",
+            "alt": "Partner 4"
+        },
+        {
+            "src": "images/partner_5.png",
+            "alt": "Partner 5"
+        },
+        {
+            "src": "images/partner_6.png",
+            "alt": "Partner 6"
+        }
     ]
 }

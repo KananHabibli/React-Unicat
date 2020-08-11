@@ -3,7 +3,7 @@ import React from 'react'
 const CourseCard = props => {
     return (
         <div className="card">
-            <img src={props.src} className="card-img-top" alt={props.src} />
+            <img src={props.src} className="card-img-top" alt={props.src}/>
             <div className="card-body">
             <h5 className="card-title"><a href="#">{props.title}</a></h5>
             <h6 className="card-subtitle mb-2 text-muted">{props.tutor}</h6>
@@ -12,10 +12,10 @@ const CourseCard = props => {
             <div className="courses-card-footer">
                 <div className="d-flex align-items-center justify-content-start flex-row">
                     <div className="card-footer-info">
-                        <i className="fas fa-graduation-cap"></i> 20 student
+                        <i className="fas fa-graduation-cap"></i> {props.students}
                     </div>
                     <div className="card-footer-info">
-                        <i className="fas fa-star"></i>5 Ratings
+                        <i className="fas fa-star"></i>{props.rating}
                     </div>
                     <div className="card-footer-price ml-auto">
                         <span>{props.discount}</span> {props.price}

@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
+import axios from 'axios'
+
 
 import '../../assets/css/Courses.css'
 import CourseCard from '../Courses/CourseCard'
 
 
+
 const Courses = props => {
+
+    const [courses, updateCourses] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/courses?_start=0&_end=3')
+        .then(res => {
+            res.data.map(elem => {
+                updateCourses(courses => [...courses, elem])
+            })
+        })
+        .catch(e => console.log(e))
+    }, [])
+
     return (
         <div className="courses">
             <div className="container">
@@ -14,18 +31,23 @@ const Courses = props => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem
                 </p>
                 <div className="row courses-cards">
-                    <div className="col-lg-4">
-                        <CourseCard src="/images/course_1.jpg" title="Software Training" tutor="Mr. John Taylor" price="$130" discount/>
-                    </div>
-                    <div className="col-lg-4">
-                        <CourseCard src="/images/course_2.jpg" title="Developing Mobile Apps" tutor="Ms. Lucius" price="FREE" discount/>
-                    </div>
-                    <div className="col-lg-4">
-                        <CourseCard src="/images/course_3.jpg" title="Starting a Startup" tutor="Mr. Charles" price="$220" discount/>
-                    </div>
+                    {courses.map((course, index) => {
+                        console.log(course)
+                        return(
+                        <div key={index} className="col-lg-4">
+                            <CourseCard
+                                src={course.src} 
+                                title={course.course} 
+                                tutor={course.tutor} 
+                                price={course.price} 
+                                discount
+                                students={course.students}
+                                rating={course.rating}/>
+                        </div>
+                    )})}
                 </div>
                 <div className="courses-button">
-                    <a href="#" className="btn mx-auto text-white">View All Courses</a>
+                    <NavLink to="/courses" className="btn mx-auto text-white">View All Courses</NavLink>
                 </div>
             </div>            
         </div>

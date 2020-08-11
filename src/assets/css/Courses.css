@@ -33,6 +33,7 @@
 
 .courses-cards .card{
     width: 100%;
+    height: 450px;
     border-radius: 6px;
     background: #FFFFFF;
     box-shadow: 0px 1px 10px rgba(29,34,47,0.1);
@@ -48,6 +49,10 @@
 .courses-cards .card-title a:hover
 {
 	color: #14bdee;
+}
+
+.courses-cards .card img{
+    height: 200px;
 }
 
 .courses-cards .card-subtitle {
@@ -66,6 +71,7 @@
 
 .courses-cards .card-text{
     margin: 15px 0;
+    height: 60px;
 }
 
 .card-footer-info:first-child{
