@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-
 
 import '../../assets/css/CardContainer.css'
 import CourseCard from './CourseCard'
 
-const CardContainer = props => {
+import fetchData from '../../utils/fetchData'
+
+const CardContainer = () => {
 
     const [courses, updateCourses] = useState([])
 
+    
+
     useEffect(() => {
-        axios.get('http://localhost:5000/courses?_start=0&_end=6')
-        .then(res => {
-            updateCourses(res.data)
-        })
-        .catch(e => console.log(e))
+        (async function() {
+            const data = await fetchData('courses?_start=0&_end=6')
+            console.log(data)
+            data.map(elem => {
+                updateCourses(courses => [...courses, elem])
+            })
+        })()
     }, [])
 
 

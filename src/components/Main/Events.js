@@ -1,21 +1,21 @@
 import React, { useState, useEffect} from 'react'
-import axios from 'axios'
 
 import '../../assets/css/Events.css'
 import EventCard from './EventCard'
 
+import fetchData from '../../utils/fetchData'
 
 const Events = props => {
 
     const [events, updateEvents] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/events')
-            .then(res => {
-                updateEvents(res.data)
-            })
+        (async function() {
+            const data = await fetchData('events')
+            console.log(data)
+            updateEvents(data)
+        })()
     }, [])
-
 
     return (
         <div className="events">

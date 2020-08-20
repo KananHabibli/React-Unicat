@@ -11,7 +11,9 @@ import Tutors from './Tutors'
 import News from './News'
 import Subscribe from './Subscribe'
 
-const Main = props =>{
+import Provider from '../../context/Provider'
+
+const Main = () =>{
     return (
         <main>
 
@@ -22,7 +24,9 @@ const Main = props =>{
             <Resources />
 
             { /* COURSES */ }
-            <Courses />
+            <Provider>
+                <Courses />
+            </Provider>
 
             {/* REGISTER */}
             <Register />

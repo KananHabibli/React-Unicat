@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 
 
 import '../../assets/css/Reason.css'
 import '../../assets/css/Reason-responsive.css'
 import AccordionItem from './AccordionItem'
-// import { accordionData } from '../../utils/accordionData'
+
+import fetchData from '../../utils/fetchData'
 
 const Reason = props => {
 
     const [data, updateData] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:5000/accordionData")
-            .then(res => {
-                updateData(res.data)
+        (async function() {
+            const data = await fetchData('accordionData')
+            console.log(data)
+            data.map(elem => {
+                updateData(courses => [...courses, elem])
             })
+        })()
     }, [])
 
 

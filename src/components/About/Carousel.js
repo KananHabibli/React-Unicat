@@ -8,17 +8,20 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../../assets/css/Carousel.css'
 import CarouselItem from './CarouselItem'
 
+import fetchData from '../../utils/fetchData'
+
 const Carousel = () => {
 
     const [partners, updatePartners] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:5000/partnerList")
-            .then(res => {
-                updatePartners(res.data)
-                console.log(res.data)
+        (async function() {
+            const data = await fetchData('partnerList')
+            console.log(data)
+            data.map(elem => {
+                updatePartners(partners => [...partners, elem])
             })
-            .catch(e => console.log(e))
+        })()
     }, [])
 
     const options = {

@@ -1,10 +1,11 @@
 import React from 'react'
 
-const CourseCard = props => {
-    return (
-        <div className="card">
-            <img src={props.src} className="card-img-top" alt={props.src}/>
-            <div className="card-body">
+
+
+const CourseCard = props =>  (
+    <div className="card">
+        <img src={props.src} className="card-img-top" alt={props.src}/>
+        <div className="card-body">
             <h5 className="card-title"><a href="#">{props.title}</a></h5>
             <h6 className="card-subtitle mb-2 text-muted">{props.tutor}</h6>
             <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
@@ -22,9 +23,8 @@ const CourseCard = props => {
                     </div>
                 </div>
             </div>
-            </div>
         </div>
-    )
-}
+    </div>
+)
 
 export default CourseCard
