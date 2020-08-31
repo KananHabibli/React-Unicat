@@ -2,7 +2,7 @@ import React from 'react'
 
 import "../../assets/css/Instagram.css"
 
-const Instagram = props => {
+const Instagram = () => {
     return (
         <div className="instagram">
             <div className="instagram-title">INSTAGRAM</div>

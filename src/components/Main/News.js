@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../../assets/css/News.css'
 
-const News = props => {
+const News = () => {
     return (
         <div className="news">
             <div className="container">

@@ -5,7 +5,7 @@ import EventCard from './EventCard'
 
 import fetchData from '../../utils/fetchData'
 
-const Events = props => {
+const Events = () => {
 
     const [events, updateEvents] = useState([])
 
@@ -29,7 +29,6 @@ const Events = props => {
                 </div>
                 <div className="events-cards">
                     <div className="row">
-                    {console.log(events)}
                         {events.map((event, index) => (
                             <div key={index} className="col-lg-4">
                             <EventCard 

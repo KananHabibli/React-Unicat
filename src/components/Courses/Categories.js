@@ -2,8 +2,7 @@ import React from 'react'
 
 import '../../assets/css/Categories.css'
 
-const Categories = props => {
-    return (
+const Categories = () => (
         <div className="categories">
             <div className="categories-title">
                 Categories
@@ -27,6 +26,5 @@ const Categories = props => {
             </ul>
         </div>
     )
-}
 
 export default Categories

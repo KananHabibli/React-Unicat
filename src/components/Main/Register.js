@@ -1,11 +1,27 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+
 
 import '../../assets/css/Register.css'
 import '../../assets/css/Register-responsive.css'
 
 import MileStone from './MileStone'
 
-const Register = (props) => {
+const Register = () => {
+
+    const [courses, updateCourses] = useState([])
+
+    useEffect(() => {
+        axios.get("http://localhost:5000/courses?_start=0&_end=6")
+            .then(res => {
+                res.data.map(elem => {
+                    updateCourses(courseNames => [...courseNames, elem.course])
+                })
+            })
+            .catch(e => console.log(e))
+        
+    }, [])
+
     return (
         <div className="register">
             <div className="container">
@@ -59,9 +75,9 @@ const Register = (props) => {
                                 <input type="text" placeholder="Phone:" className="counter-input" />
                                 <select name="counter-select" id="counter-select" className="counter-input counter-options">
                                     <option>Choose Subject</option>
-                                    <option>Subject</option>
-                                    <option>Subject</option>
-                                    <option>Subject</option>
+                                    {courses.map((course, index) => (
+                                        <option key={index}>{course}</option>
+                                    ))}
                                 </select>
                                 <textarea className="counter-input counter-textarea" placeholder="Message:"></textarea>
                                 <button className="btn text-white counter-submit">Submit Now</button>
@@ -74,4 +90,4 @@ const Register = (props) => {
     )
 }
 
-export default Register
+export default React.memo(Register)

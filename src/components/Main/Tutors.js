@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 
 import '../../assets/css/Tutors.css'
 
 import TutorCard from './TutorCard'
-const Tutors = props => {
+import fetchData from '../../utils/fetchData'
+
+const Tutors = () => {
+
+    const [tutors, updateTutors] = useState([])
+
+    useEffect(() => {
+        (async function() {
+            const data = await fetchData('tutors')
+            updateTutors(data)
+        })()
+    }, [])
+
     return (
         <div className="tutors">
             <div className="container">
@@ -16,34 +28,15 @@ const Tutors = props => {
                 </div>
                 <div className="tutors-cards">
                     <div className="row">
-                        <div className="col-lg-3 col-md-6">
-                            <TutorCard  
-                                src="/images/team_1.jpg" 
-                                alt="Tutor 1"
-                                tutor="Jacke Masito" 
-                                position="Marketing & Management"/>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
-                            <TutorCard  
-                            src="/images/team_2.jpg" 
-                            alt="Tutor 2"
-                            tutor="William James" 
-                            position="Designer & Website"/>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
-                            <TutorCard  
-                                src="/images/team_3.jpg" 
-                                alt="Tutor 3"
-                                tutor="John Tyler" 
-                                position="Quantum Mechanics"/>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
-                            <TutorCard  
-                            src="/images/team_4.jpg" 
-                            alt="Tutor 4"
-                            tutor="Veronica Vahn" 
-                            position="Math & Physics"/>
-                        </div>
+                        {tutors.map((tutor, index) => (
+                            <div key={index} className="col-lg-3 col-md-6">
+                                <TutorCard  
+                                    src={tutor.src}
+                                    alt={tutor.alt}
+                                    tutor={tutor.tutor}
+                                    position={tutor.position}/>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -51,4 +44,4 @@ const Tutors = props => {
     )
 }
 
-export default Tutors
+export default React.memo(Tutors)

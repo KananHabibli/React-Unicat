@@ -3,7 +3,7 @@ import CountUp from 'react-countup'
 import VizSensor from 'react-visibility-sensor';
 
 
-const MileStone = props => {
+const MileStone = ({end, suffix}) => {
 
     const [visible, changeState] = useState(false)
 
@@ -16,8 +16,8 @@ const MileStone = props => {
             }}>
                 <CountUp
                 start={0}
-                end={visible ? props.end : 0}
-                suffix={props.suffix}
+                end={visible ? end : 0}
+                suffix={suffix}
                 duration={2} />
         </VizSensor>
     )

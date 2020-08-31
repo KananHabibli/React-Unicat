@@ -1,19 +1,28 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-const WelcomeCard = (props) => {
+
+const WelcomeCard = ({ src, alt, title, text}) => {
     return (
         <div className="card">
             <div className="img-container">
-                <img src={props.src} className="card-img-top" alt={props.alt} />
+                <img src={src} className="card-img-top" alt={alt} />
             </div>
             <div className="card-body">
                 <h5 className="card-title">
-                    <a href="#">{props.title}</a>
+                    <a href="#">{title}</a>
                 </h5>
-                <p className="card-text">{props.text}</p>
+                <p className="card-text">{text}</p>
             </div>
         </div>
     )
 }
 
 export default WelcomeCard
+
+WelcomeCard.propTypes = {
+    src: PropTypes.string,
+    alt: PropTypes.string,
+    title: PropTypes.string,
+    text: PropTypes.string
+}

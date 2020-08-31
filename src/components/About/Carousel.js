@@ -17,7 +17,6 @@ const Carousel = () => {
     useEffect(() => {
         (async function() {
             const data = await fetchData('partnerList')
-            console.log(data)
             data.map(elem => {
                 updatePartners(partners => [...partners, elem])
             })
@@ -47,14 +46,10 @@ const Carousel = () => {
             <div className="container">
                 <OwlCarousel
                     className="owl-theme"
-                    {...options}
-                >
-                {partners.map((partner, index) => {
-                    console.log(partner)
-                    return(
-                    <CarouselItem key={index} src={partner.src} alt={partner.alt} />
-                )})}
-                
+                    {...options}>
+                    {partners.map((partner, index) => (
+                        <CarouselItem key={index} src={partner.src} alt={partner.alt} />
+                    ))}
                 </OwlCarousel>
             </div>
         </div>

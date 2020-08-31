@@ -5,7 +5,7 @@ import WelcomeCard from './WelcomeCard'
 
 import fetchData from '../../utils/fetchData'
 
-const Welcome = props => {
+const Welcome = () => {
 
     const [about, updateAbout] = useState([])
 

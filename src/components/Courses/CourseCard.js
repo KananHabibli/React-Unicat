@@ -1,25 +1,25 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 
-
-const CourseCard = props =>  (
+const CourseCard = ({src, title, tutor, students, rating, price, discount}) =>  (
     <div className="card">
-        <img src={props.src} className="card-img-top" alt={props.src}/>
+        <img src={src} className="card-img-top" alt={src}/>
         <div className="card-body">
-            <h5 className="card-title"><a href="#">{props.title}</a></h5>
-            <h6 className="card-subtitle mb-2 text-muted">{props.tutor}</h6>
+            <h5 className="card-title"><a href="#">{title}</a></h5>
+            <h6 className="card-subtitle mb-2 text-muted">{tutor}</h6>
             <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
             <hr />
             <div className="courses-card-footer">
                 <div className="d-flex align-items-center justify-content-start flex-row">
                     <div className="card-footer-info">
-                        <i className="fas fa-graduation-cap"></i> {props.students}
+                        <i className="fas fa-graduation-cap"></i> {students}
                     </div>
                     <div className="card-footer-info">
-                        <i className="fas fa-star"></i>{props.rating}
+                        <i className="fas fa-star"></i>{rating}
                     </div>
                     <div className="card-footer-price ml-auto">
-                        <span>{props.discount}</span> {props.price}
+                        <span>{discount}</span> {price}
                     </div>
                 </div>
             </div>
@@ -28,3 +28,12 @@ const CourseCard = props =>  (
 )
 
 export default CourseCard
+
+CourseCard.propTypes = {
+    src:      PropTypes.string,
+    tutor:    PropTypes.string,
+    title:    PropTypes.string,
+    students: PropTypes.number,
+    rating:   PropTypes.number,
+    price:    PropTypes.string
+}

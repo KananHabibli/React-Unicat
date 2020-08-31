@@ -1,34 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import "../../assets/css/LatestCourses.css"
 import MediaCard from './MediaCard'
 
-const LatestCoourses = props => {
+import fetchData from '../../utils/fetchData'
+
+const LatestCourses = () => {
+
+    const [courses, updateCourses] = useState([])
+
+    useEffect(() => {
+        (async function() {
+            const data = await fetchData('latestCourses')
+            updateCourses(data)
+        })()
+    }, [])
+
     return (
         <div className="latest-courses">
             <div className="latest-title">Latest Courses</div>
             <ul className="list-unstyled">
-                <MediaCard
-                    src="images/latest_1.jpg"
-                    alt="Latest Course 1"
-                    title="How to Design a Logo a Beginners Course"
-                    price="Free"
-                />
-                <MediaCard
-                    src="images/latest_2.jpg"
-                    alt="Latest Course 2"
-                    title="Photography for Beginners MasterclassName"
-                    price="170"
-                />
-                <MediaCard
-                    src="images/latest_3.jpg"
-                    alt="Latest Course 3"
-                    title="The Secrets of Body Language"
-                    price="220"
-                />
+                {courses.map((course, index) => (
+                    <MediaCard
+                        key={index}
+                        src={course.src}
+                        alt={course.alt}
+                        title={course.title}
+                        price={course.price}
+                    />
+                ))}
             </ul>
         </div>
     )
 }
 
-export default LatestCoourses
+export default LatestCourses

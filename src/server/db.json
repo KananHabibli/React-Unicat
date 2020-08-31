@@ -216,5 +216,73 @@
             "src": "images/partner_6.png",
             "alt": "Partner 6"
         }
+    ],
+    "resources": [
+        {
+            "src": "/images/icon_1.png",
+            "alt": "Experts",
+            "title": "The Experts"
+        },
+        {
+            "src": "/images/icon_2.png",
+            "alt": "Experts",
+            "title": "Book & Library"
+        },
+        {
+            "src": "/images/icon_3.png",
+            "alt": "Experts",
+            "title": "Best Courses"
+        },
+        {
+            "src": "/images/icon_1.png",
+            "alt": "Experts",
+            "title": "Award & Reward"
+        }
+    ],
+    "tutors": [
+        {
+            "src": "/images/team_1.jpg",
+            "alt": "Tutor 1",
+            "tutor": "Jacke Masito",
+            "position": "Marketing & Management"
+        },
+        {
+            "src": "/images/team_2.jpg",
+            "alt": "Tutor 2",
+            "tutor": "William James",
+            "position": "Designer & Website"
+        },
+        {
+            "src": "/images/team_3.jpg",
+            "alt": "Tutor 3",
+            "tutor": "John Tyler",
+            "position": "Quantum Mechanics"
+        },
+        {
+            "src": "/images/team_4.jpg",
+            "alt": "Tutor 4",
+            "tutor": "Veronica Vahn",
+            "position": "Math & Physics"
+        }
+    ],
+    "latestCourses": [
+        {
+            "src": "images/latest_1.jpg",
+            "alt": "Latest Course 1",
+            "title": "How to Design a Logo a Beginners Course",
+            "price": "Free"
+        },
+        {
+            "src": "images/latest_2.jpg",
+            "alt": "Latest Course 2",
+            "title": "Photography for Beginners Master",
+            "price": "170"
+        },
+        {
+            "src": "images/latest_3.jpg",
+            "alt": "Latest Course 3",
+            "title": "The Secrets of Body Language",
+            "price": "220"
+        }
     ]
 }

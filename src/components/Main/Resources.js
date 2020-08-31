@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 
 import '../../assets/css/Resources.css'
 import ResourceCard from './ResourceCard'
-const Resources = props => {
+
+import fetchData from '../../utils/fetchData'
+
+
+const Resources = () => {
+
+    const [resources, updateResources] = useState([])
+
+    useEffect(() => {
+        (async function() {
+            const data = await fetchData('resources')
+            updateResources(data)
+        })()
+    }, [])
+
     return (
         <div className="resources">
             <div className="container">
@@ -12,34 +26,18 @@ const Resources = props => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem
                 </p>
                 <div className="row resource-cards">
-                    <div className="col-lg-3">
-                        <ResourceCard 
-                            src="/images/icon_1.png" 
-                            alt="Experts" 
-                            title="The Experts"/>
-                    </div>
-                    <div className="col-lg-3">
-                        <ResourceCard 
-                        src="/images/icon_2.png" 
-                        alt="Experts" 
-                        title="Book & Library"/>
-                    </div>
-                    <div className="col-lg-3">
-                        <ResourceCard 
-                        src="/images/icon_3.png" 
-                        alt="Experts" 
-                        title="Best Courses"/>
-                    </div>
-                    <div className="col-lg-3">
-                        <ResourceCard 
-                        src="/images/icon_4.png" 
-                        alt="Experts" 
-                        title="Award & Reward"/>
-                    </div>
+                    {resources.map((resource, index) => (
+                        <div className="col-lg-3" key={index}>
+                            <ResourceCard 
+                                src={resource.src}
+                                alt={resource.alt} 
+                                title={resource.title} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
     )
 }
 
-export default Resources
+export default React.memo(Resources)

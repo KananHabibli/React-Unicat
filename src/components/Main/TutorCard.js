@@ -1,18 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types';
 
-const TutorCard = props => {
+
+const TutorCard = ({src, alt, tutor, position}) => {
     return (
         <div className="tutor-card">
             <div className="tutor-image">
-                <img src={props.src} alt={props.alt} />
+                <img src={src} alt={alt} />
             </div>
             <div className="tutor-body">
                 <div className="tutor-name">
                     <a href="#">
-                        {props.tutor}
+                        {tutor}
                     </a>
                 </div>
-                <div className="tutor-position">{props.psoition}</div>
+                <div className="tutor-position">{position}</div>
                 <div className="tutor-social">
                     <ul>
                         <li>
@@ -38,3 +40,10 @@ const TutorCard = props => {
 }
 
 export default TutorCard
+
+TutorCard.propTypes = {
+    src: PropTypes.string,
+    alt: PropTypes.string,
+    tutor: PropTypes.string,
+    position: PropTypes.string
+}

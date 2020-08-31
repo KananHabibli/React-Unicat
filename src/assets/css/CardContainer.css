@@ -2,10 +2,6 @@
     margin-top: 25px;
 }
 
-.courses-cards .col-lg-6:nth-child(even) {
-    padding-left: 30px;
-}
-
 .courses-cards .col-lg-6{
     margin-bottom: 50px;
 }
@@ -75,4 +71,14 @@
     text-decoration: line-through;
     color: #b5b8be;
     margin-right: 10px;
+}
+
+@media (max-width: 992px){
+
+    .courses-cards .card{
+        margin: 0 auto;
+        width: 75%;
+        border-radius: 4px;
+    }
+
 }

@@ -7,14 +7,13 @@ import AccordionItem from './AccordionItem'
 
 import fetchData from '../../utils/fetchData'
 
-const Reason = props => {
+const Reason = () => {
 
     const [data, updateData] = useState([])
 
     useEffect(() => {
         (async function() {
             const data = await fetchData('accordionData')
-            console.log(data)
             data.map(elem => {
                 updateData(courses => [...courses, elem])
             })

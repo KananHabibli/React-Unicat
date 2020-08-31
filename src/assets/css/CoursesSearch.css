@@ -38,3 +38,23 @@
 .courses-search-input:focus, .courses-search-input:active{
     border: solid 1px #14bdee
 }
+
+@media (max-width: 992px){
+
+    .courses-search-input{
+        width: 200px;
+        height: 36px;
+    }
+
+    .courses-search-button{
+        width: 120px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 800px){
+    .courses-search-input{
+        width: 140px;
+        height: 33px;
+    }
+}

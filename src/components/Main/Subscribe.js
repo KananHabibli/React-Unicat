@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../../assets/css/Subscribe.css'
 
-const Subscribe = props => {
+const Subscribe = () => {
     return (
         <div className="subscribe">
             <div className="container">

@@ -15,35 +15,15 @@
     margin-top: 30px;
 }
 
-.instagram-item{
-    position: relative;
-}
+@media (max-width: 992px){
 
-.instagram p{
-    z-index: 1;
-}
+	.instagram-item{
+		padding: 0;
+		margin: 0;
+	}
 
-.instagram-overlay{
-    display: block;
-	position: absolute;
-	top: 0;
-	left: 15px;
-	width: 85%;
-	height: 100%;
-	background: rgba(20,189,238,0.7);
-	opacity: 0;
-	pointer-events: none;
-	font-size: 33px;
-	font-weight: 300;
-	color: #FFFFFF;
-	transition: all 200ms ease;
-}
+    .instagram-item img{
+		width: 65%;
+	}
 
-.instagram-item:hover .instagram-overlay
-{
-	opacity: 1;
-}
-.group1
-{
-	outline: none;
 }

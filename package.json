@@ -12,6 +12,7 @@
     "jquery-colorbox": "^1.6.4",
     "json-server": "^0.16.1",
     "masonry-layout": "^4.2.2",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-countup": "^4.3.3",

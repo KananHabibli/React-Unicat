@@ -2,7 +2,7 @@ import React from 'react'
 
 import "../../assets/css/Pagination.css"
 
-const Pagination = props => {
+const Pagination = () => {
     return (
         <div className="courses-pagination d-flex align-items-center justify-content-start flex-row">
             <nav aria-label="...">

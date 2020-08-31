@@ -9,8 +9,6 @@ const CardContainer = () => {
 
     const [courses, updateCourses] = useState([])
 
-    
-
     useEffect(() => {
         (async function() {
             const data = await fetchData('courses?_start=0&_end=6')
@@ -25,20 +23,18 @@ const CardContainer = () => {
     return (
         <div className="courses-cards">
             <div className="row">
-                {courses.map((course, index) => {
-                    return (
-                        <div key={index} className="col-lg-6">
-                            <CourseCard
-                                src={course.src} 
-                                title={course.course} 
-                                tutor={course.tutor} 
-                                price={course.price} 
-                                discount
-                                students={course.students}
-                                rating={course.rating}/>
-                        </div>
-                        )
-                })}
+                {courses.map((course, index) => (
+                    <div key={index} className="col-lg-6">
+                        <CourseCard
+                            src={course.src} 
+                            title={course.course} 
+                            tutor={course.tutor} 
+                            price={course.price} 
+                            discount
+                            students={course.students}
+                            rating={course.rating}/>
+                    </div>
+                ))}
             </div>
         </div>
     )

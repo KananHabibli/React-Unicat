@@ -1,15 +1,12 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import '../../assets/css/Courses.css'
 import CourseCard from '../Courses/CourseCard'
 
-import fetchData from '../../utils/fetchData'
 import Context from '../../context/Context'
 
-const Courses = props => {
-
-    return (
+const Courses = () => (
         <div className="courses">
             <div className="container">
                 <h1 className="text-center courses-title">Popular Online Courses</h1>
@@ -19,7 +16,6 @@ const Courses = props => {
                 </p>
                 <Context.Consumer>
                     {context => {
-                        console.log(context)
                         return (
                         <div className="row courses-cards">
                             {Object.keys(context.data).map( index => {
@@ -44,6 +40,5 @@ const Courses = props => {
             </div>            
         </div>
     )
-}
 
 export default Courses
