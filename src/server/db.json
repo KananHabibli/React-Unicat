@@ -284,5 +284,39 @@
             "title": "The Secrets of Body Language",
             "price": "220"
         }
+    ],
+    "blogs": [
+        {
+            "src": "images/blog_1.jpg",
+            "alt": "Blog 1",
+            "title": "Here's What You Need to Know About Online Testing"
+        },
+        {
+            "title": "Here's What You Need to Know About Online Testing"
+        },
+        {
+            "src": "images/blog_1.jpg",
+            "alt": "Blog 1",
+            "title": "Here's What You Need to Know About Online Testing"
+        },
+        {
+            "video": "images/mov_bbb.mp4",
+            "poster":  "images/blog_2.jpg"
+        },
+        {
+            "src": "images/blog_2.jpg",
+            "alt": "Blog 1",
+            "title": "Here's What You Need to Know About Online Testing"
+        },
+        {
+            "src": "images/blog_3.jpg",
+            "alt": "Blog 1",
+            "title": "Here's What You Need to Know About Online Testing"
+        },
+        {
+            "src": "images/blog_4.jpg",
+            "alt": "Blog 1",
+            "title": "Here's What You Need to Know About Online Testing"
+        }
     ]
 }
