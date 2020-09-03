@@ -2,19 +2,18 @@ import React from 'react'
 
 import '../../assets/css/GeneralCourses.css'
 
-import PageTail from '../Main/PageTail'
-import CourseSearch from './CourseSearch'
+import PageTail      from '../Main/PageTail'
+import CourseSearch  from './CourseSearch'
 import CardContainer from './CardContainer'
-import Pagination from './Pagination'
-import Categories from './Categories'
+import Categories    from './Categories'
 import LatestCourses from './LatestCourses'
-import Subscribe from '../Main/Subscribe'
-import Instagram from './Instagram'
-import Tags from './Tags'
-import Banner from './Banner'
+import Subscribe     from '../Main/Subscribe'
+import Instagram     from './Instagram'
+import Tags          from './Tags'
+import Banner        from './Banner'
 
 
-const Courses = props => {
+const Courses = () => {
     return (
         <div>
             {/*PAGE TAIL*/}
@@ -27,7 +26,7 @@ const Courses = props => {
                         <div className="col-lg-8">
                             <CourseSearch />
                             <CardContainer />
-                            <Pagination />
+                            
                         </div>
                         <div className="col-lg-4">
                             {/* CATEGORIES */} 

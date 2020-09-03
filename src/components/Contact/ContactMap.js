@@ -8,16 +8,16 @@ const ContactMap = props => {
         <div className="contact_map">
 
             {/* Google Map */}
-            <div class="map">
-                <div id="google_map" class="google_map">
-                    <div class="map_container">
+            <div className="map">
+                <div id="google_map" className="google_map">
+                    <div className="map_container">
                         <Map
                         google={props.google}
                         zoom={8}
                         style={{
                             width: '100%',
                             height: '300px',
-                            minwidth: '50%'
+                            minWidth: '50%'
                             }}
                         initialCenter={{ lat: 40.3945713, lng: 49.7847483}}
                         />
