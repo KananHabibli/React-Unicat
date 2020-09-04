@@ -13,7 +13,6 @@ const Welcome = () => {
     useEffect(() => {
         (async function() {
             const data = await fetchData('about')
-            console.log(data)
             updateAbout(data)
         })()
     }, [])

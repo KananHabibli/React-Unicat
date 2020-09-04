@@ -9,7 +9,6 @@ const Provider = ({ children }) => {
     useEffect(() => {
         (async function() {
             const data = await fetchData('courses?_start=0&_end=3')
-            console.log(data)
             data.map(elem => {
                 updateCourses(courses => [...courses, elem])
             })

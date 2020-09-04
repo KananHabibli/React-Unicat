@@ -12,7 +12,6 @@ const Events = () => {
     useEffect(() => {
         (async function() {
             const data = await fetchData('events')
-            console.log(data)
             updateEvents(data)
         })()
     }, [])

@@ -109,111 +109,111 @@
             "rating": 4.6
         },
         {
-            "id": "7",
-            "course": "Machine Learning",
-            "src": "https://www.alphagamma.eu/wp-content/uploads/2019/10/alphagamma-Understanding-Artificial-Intelligence-Machine-Learning-and-Deep-Learning-entrepreneurship.jpg",
-            "price": "$29.99",
-            "tutor": "John Doe",
-            "students": 15647,
-            "rating": 4.9
-        },
-        {
-            "id": "8",
-            "course": "Ios 11 & Swift 4",
-            "src": "https://img-a.udemycdn.com/course/240x135/1289478_5831_9.jpg",
-            "price": "$12.99",
-            "tutor": "Angela Yu",
-            "students": 12964,
+            "id": "13",
+            "course": "AWS Certified Developer - Associate 2020",
+            "src": "https://img-a.udemycdn.com/course/240x135/393306_f2a5_6.jpg",
+            "price": "$129.99",
+            "tutor": "Ryan Kroonenburg",
+            "students": 193522,
             "rating": 4.3
         },
         {
-            "id": "9",
-            "course": "React - The Complete Guide",
-            "src": "https://img-a.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
+            "id": "14",
+            "course": "The Complete Oracle SQL Certification Course",
+            "src": "https://img-a.udemycdn.com/course/240x135/866196_be1d.jpg",
+            "price": "$122.99",
+            "tutor": "Imtiaz Ahmad",
+            "students": 82181,
+            "rating": 4.5
+        },
+        {
+            "id": "15",
+            "course": "The Complete Salesforce Classic Administrator Certification",
+            "src": "https://img-a.udemycdn.com/course/240x135/693700_d3eb_4.jpg",
             "price": "$12.99",
-            "tutor": "Maximilian Schwarzmüller",
-            "students": 6782,
-            "rating": 3.9
+            "tutor": "Mike Wheeler",
+            "students": 70254,
+            "rating": 4.4
         },
         {
-            "id": "10",
-            "course": "Linux Command Line Basics",
-            "src": "https://img-a.udemycdn.com/course/240x135/95246_69f4_23.jpg",
-            "price": "$15.99",
-            "tutor": "Ahmed Alkabary",
-            "students": 7863,
-            "rating": 4.1
+            "id": "16",
+            "course": "Amazon Web Services (AWS) Certified - 4 Certifications!",
+            "src": "https://img-a.udemycdn.com/course/240x135/1047846_83ef_28.jpg",
+            "price": "$174.99",
+            "tutor": "BackSpace Academy",
+            "students": 97873,
+            "rating": 4.4
         },
         {
-            "id": "11",
-            "course": "Learn Ethical Hacking From Scratch",
-            "src": "https://img-a.udemycdn.com/course/240x135/857010_8239_2.jpg",
-            "price": "$15.99",
-            "tutor": "Faye Ellis",
-            "students": 12964,
-            "rating": 4.6
-        },
-        {
-            "id": "12",
-            "course": "AWS Certified Developer",
-            "src": "https://img-a.udemycdn.com/course/240x135/393306_f2a5_6.jpg",
-            "price": "$18.99",
-            "tutor": "Ahmed Alkabary",
-            "students": 12964,
-            "rating": 4.6
-        },
-        {
-            "id": "7",
-            "course": "Machine Learning",
-            "src": "https://www.alphagamma.eu/wp-content/uploads/2019/10/alphagamma-Understanding-Artificial-Intelligence-Machine-Learning-and-Deep-Learning-entrepreneurship.jpg",
+            "id": "17",
+            "course": "AWS Certified Cloud Practitioner 2020",
+            "src": "https://img-a.udemycdn.com/course/240x135/1360446_f69e.jpg",
             "price": "$29.99",
-            "tutor": "John Doe",
-            "students": 15647,
-            "rating": 4.9
+            "tutor": "Zeal Vora",
+            "students": 84074,
+            "rating": 4.5
         },
         {
-            "id": "8",
-            "course": "Ios 11 & Swift 4",
-            "src": "https://img-a.udemycdn.com/course/240x135/1289478_5831_9.jpg",
-            "price": "$12.99",
-            "tutor": "Angela Yu",
-            "students": 12964,
+            "id": "18",
+            "course": "Cisco CCNA 200-301 Exam: Complete Course with practical labs",
+            "src": "https://img-a.udemycdn.com/course/240x135/1016734_1720_2.jpg",
+            "price": "$19.99",
+            "tutor": "David Bombal",
+            "students": 63868,
+            "rating": 4.6
+        },
+        {
+            "id": "19",
+            "course": "Pass ISTQB Foundation Level (CTFL) Exam From First Trial",
+            "src": "https://img-a.udemycdn.com/course/240x135/269394_8054_7.jpg",
+            "price": "$129.99",
+            "tutor": "Maged Koshty",
+            "students": 35132,
             "rating": 4.3
         },
         {
-            "id": "9",
-            "course": "React - The Complete Guide",
-            "src": "https://img-a.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
-            "price": "$12.99",
-            "tutor": "Maximilian Schwarzmüller",
-            "students": 6782,
-            "rating": 3.9
+            "id": "20",
+            "course": "AWS Essentials",
+            "src": "https://img-a.udemycdn.com/course/240x135/1108858_0a1c_3.jpg",
+            "price": "$129.99",
+            "tutor": "AWS, a subsidiary of Amazon.com",
+            "students": 30854,
+            "rating": 4.3
         },
         {
-            "id": "10",
-            "course": "Linux Command Line Basics",
-            "src": "https://img-a.udemycdn.com/course/240x135/95246_69f4_23.jpg",
-            "price": "$15.99",
-            "tutor": "Ahmed Alkabary",
-            "students": 7863,
-            "rating": 4.1
+            "id": "21",
+            "course": "Python Bootcamp 2020 Build 15 working Applications and Games",
+            "src": "https://img-a.udemycdn.com/course/240x135/2485240_d405.jpg",
+            "price": "$139.99",
+            "tutor": "Dev Nirwal, Frahaan Hussain",
+            "students": 242504,
+            "rating": 4.3
         },
         {
-            "id": "11",
-            "course": "Learn Ethical Hacking From Scratch",
-            "src": "https://img-a.udemycdn.com/course/240x135/857010_8239_2.jpg",
-            "price": "$15.99",
-            "tutor": "Faye Ellis",
-            "students": 12964,
-            "rating": 4.6
+            "id": "22",
+            "course": "Mastering Ansible",
+            "src": "https://img-a.udemycdn.com/course/240x135/628796_f0b0_9.jpg",
+            "price": "$29.99",
+            "tutor": "Chris Lunsford",
+            "students": 30996,
+            "rating": 4.2
         },
         {
-            "id": "12",
-            "course": "AWS Certified Developer",
-            "src": "https://img-a.udemycdn.com/course/240x135/393306_f2a5_6.jpg",
-            "price": "$18.99",
-            "tutor": "Ahmed Alkabary",
-            "students": 12964,
+            "id": "23",
+            "course": "Learn Advanced C++ Programming",
+            "src": "https://img-a.udemycdn.com/course/240x135/619698_0efe.jpg",
+            "price": "$34.99",
+            "tutor": "John Purcell",
+            "students": 37081,
+            "rating": 4.5
+        },
+        {
+            "id": "24",
+            "course": "Introduction to Computer Networks for Non-Techies",
+            "src": "https://img-a.udemycdn.com/course/240x135/580876_a07a_2.jpg",
+            "price": "$94.99",
+            "tutor": "Alton Hardin",
+            "students": 25683,
             "rating": 4.6
         }
         

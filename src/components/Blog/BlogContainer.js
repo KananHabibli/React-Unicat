@@ -17,7 +17,6 @@ const BlogContainer = () => {
     useEffect(() => {
         (async function() {
             const data = await fetchData('blogs')
-            console.log(data)
             updateBlogs(data)
         })()
     }, [])

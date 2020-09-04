@@ -7,34 +7,37 @@ const interval = ['1-6', '6-12', '12-18', '18-24']
 
 const Pagination = ({ fetch }) => {
 
-    const [currentPage, setCurrentPage] = useState(1)
+    const [currentPage, setCurrentPage] = useState( localStorage.getItem('currentPage') || 1)
     const [nextDisplay, setNext] = useState('inline-block')
     const [prevDisplay, setPrev] = useState('none')
 
     const handlePaginationLink = (event, numb) => {
         event.preventDefault()
+        localStorage.setItem('currentPage', numb)
         setCurrentPage(numb)
     }
 
     const handleNextLink = (event) => {
         event.preventDefault()
+        localStorage.setItem('currentPage', currentPage + 1)
         setCurrentPage(currentPage + 1)
     }
 
     const handlePrevLink = (event) => {
         event.preventDefault()
+        localStorage.setItem('currentPage', currentPage - 1)
         setCurrentPage(currentPage - 1)
     }
 
     const checkButtons = () => {
         if(currentPage === 1) {
-            setNext('inline-block')
             setPrev('none')
+            setNext('inline-block')
         }
 
         if(currentPage > 1 && currentPage <= pages.length){
-            setNext('inline-block')
             setPrev('inline-block')
+            setNext('inline-block')
         }
 
         if(currentPage === pages.length) {
@@ -44,9 +47,12 @@ const Pagination = ({ fetch }) => {
     }
 
     useEffect(() => {
-        console.log('rendered')
         checkButtons()
         fetch(currentPage)
+
+        return function cleanup() {
+            localStorage.setItem('currentPage', 1)
+        }
     }, [currentPage])
 
 
@@ -60,7 +66,7 @@ const Pagination = ({ fetch }) => {
                         </a>
                     </li>
                     {pages.map((page, index) => {
-                        if(page === currentPage){
+                        if(page === parseInt(currentPage)){
                             return (
                                 <li key={index} className="page-item active" aria-current="page" >
                                     <a className="page-link" href="#" onClick={event => handlePaginationLink(event, page)}>{page}<span className="sr-only">(current)</span>

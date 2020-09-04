@@ -41,7 +41,6 @@ const CardContainer = () => {
         (async function() {
             updateCourses([])
             const data = await fetchData(`courses?_start=${start}&_end=${end}`)
-            console.log(data)
             data.map(elem => {
                 updateCourses(courses => [...courses, elem])
             })
