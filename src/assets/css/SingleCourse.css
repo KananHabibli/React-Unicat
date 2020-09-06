@@ -1,0 +1,55 @@
+.singleCourse{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 150px;
+    height: 75vh;
+    padding: 20px 40px;
+    margin-bottom:  30px;
+    box-shadow: 0px 1px 10px rgba(29,34,47,0.1);
+    border-radius: 5px;
+}
+
+.course-image{
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+}
+
+.course-image img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+.media{
+    margin: 10px;
+    padding: 10px;
+    color: #000;
+}
+
+.course-title{
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.course-body{
+    text-align: justify;
+    /* width: 75%;
+    margin: 0 auto; */
+    font-size: 17px;
+    color: #000;
+}
+
+.badge-info{
+    color: #fff !important;
+    padding: 7px;
+}
+
+.fa-graduation-cap{
+    color: #ffc80a;
+}
+
+.fa-book-open{
+    color: rgb(20 189 238);
+}

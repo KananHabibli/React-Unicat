@@ -7,7 +7,6 @@ import MainCarouselItem from './MainCarouselItem'
 const MainCarousel = () => {
 
     const [courseNames, updateCourseNames] = useState([])
-    const [prices, updatePrices]   = useState([])
 
     useEffect(() => {
         axios.get("http://localhost:5000/courses")
@@ -15,11 +14,6 @@ const MainCarousel = () => {
                 res.data.map(elem => {
                     updateCourseNames(courseNames => [...courseNames, elem.course])
                 })
-            })
-            .catch(e => console.log(e))
-        axios.get("http://localhost:5000/prizeInterval")
-            .then(res => {
-                updatePrices(res.data)
             })
             .catch(e => console.log(e))
         
@@ -31,19 +25,16 @@ const MainCarousel = () => {
                 <div className="carousel-item active">
                     <MainCarouselItem
                         courseNames={courseNames}
-                        prices={prices}
                     />
                 </div>
                 <div className="carousel-item">
                     <MainCarouselItem
                         courseNames={courseNames}
-                        prices={prices}
                     />
                 </div>
                 <div className="carousel-item">
                     <MainCarouselItem
                         courseNames={courseNames}
-                        prices={prices}
                     />
                 </div>
             </div>

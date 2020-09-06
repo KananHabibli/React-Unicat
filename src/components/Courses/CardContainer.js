@@ -1,4 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
 
 import '../../assets/css/CardContainer.css'
 
@@ -42,7 +44,7 @@ const CardContainer = () => {
             updateCourses([])
             const data = await fetchData(`courses?_start=${start}&_end=${end}`)
             data.map(elem => {
-                updateCourses(courses => [...courses, elem])
+                return updateCourses(courses => [...courses, elem])
             })
         })()
     }, [start, end])
@@ -54,14 +56,16 @@ const CardContainer = () => {
                 <div className="row">
                     {courses.map((course, index) => (
                         <div key={index} className="col-lg-6">
-                            <CourseCard
-                                src={course.src} 
-                                title={course.course} 
-                                tutor={course.tutor} 
-                                price={course.price} 
-                                discount
-                                students={course.students}
-                                rating={course.rating}/>
+                            <Link to={{pathname: `/${course.id}/${course.course}`}}>
+                                <CourseCard
+                                    src={course.src} 
+                                    title={course.course} 
+                                    tutor={course.tutor} 
+                                    price={course.price} 
+                                    discount
+                                    students={course.students}
+                                    rating={course.rating}/>
+                            </Link>
                         </div>
                     ))}
                 </div>

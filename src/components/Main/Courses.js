@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 import '../../assets/css/Courses.css'
 import CourseCard from '../Courses/CourseCard'
@@ -21,14 +21,17 @@ const Courses = () => (
                             {Object.keys(context.data).map( index => {
                                 return(
                                     <div key={index} className="col-lg-4">
-                                        <CourseCard
-                                            src={context.data[index].src} 
-                                            title={context.data[index].course} 
-                                            tutor={context.data[index].tutor} 
-                                            price={context.data[index].price} 
-                                            discount
-                                            students={context.data[index].students}
-                                            rating={context.data[index].rating}/>
+                                        <Link to={{pathname: `/${context.data[index].id}/${context.data[index].course}`}}>
+                                            <CourseCard
+                                                src={context.data[index].src} 
+                                                title={context.data[index].course} 
+                                                tutor={context.data[index].tutor} 
+                                                price={context.data[index].price} 
+                                                discount
+                                                students={context.data[index].students}
+                                                rating={context.data[index].rating}/>
+                                        </Link>
+
                                     </div>
                             )})}
                         </div>

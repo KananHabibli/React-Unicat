@@ -6,7 +6,7 @@ const CourseCard = ({src, title, tutor, students, rating, price, discount}) =>  
     <div className="card">
         <img src={src} className="card-img-top" alt={src}/>
         <div className="card-body">
-            <h5 className="card-title"><a href="#">{title}</a></h5>
+            <h5 className="card-title">{title}</h5>
             <h6 className="card-subtitle mb-2 text-muted">{tutor}</h6>
             <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
             <hr />

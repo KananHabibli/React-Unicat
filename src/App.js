@@ -13,6 +13,7 @@ const Blog     = lazy(() => import('./components/Blog/Blog'));
 const Contact  = lazy(() => import('./components/Contact/Contact'));
 const Login    = lazy(() => import('./components/Subscribe/Login'));
 const Register = lazy(() => import('./components/Subscribe/Register'));
+const SingleCourse = lazy(() => import('./components/Courses/SingleCourse'))
 
 
 const App = () => (
@@ -20,13 +21,15 @@ const App = () => (
     <Suspense fallback={<Loading />}>
         <Navbar />
           <Switch>
-            <Route path='/' exact component={Unicat} />
-            <Route path='/about' exact component={About} />
-            <Route path='/courses' exact component={Courses} />
-            <Route path='/blog' exact component={Blog} />
-            <Route path='/contact' exact component={Contact} />
-            <Route path='/login' component={Login} />
+            <Route path='/'         exact component={Unicat}  />
+            <Route path='/about'    exact component={About}   />
+            <Route path='/courses'  exact component={Courses} />
+            <Route path='/blog'     exact component={Blog}    />
+            <Route path='/contact'  exact component={Contact} />
+            <Route path='/login'    component={Login} />
             <Route path='/register' component={Register} />
+            <Route path='/loading'  component={Loading} />
+            <Route path='/:id/:title'  component={SingleCourse} />
           </Switch>
         <Footer />
       </Suspense>
