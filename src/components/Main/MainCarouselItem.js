@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const MainCarouselItem = ({ courseNames }) => (
     <Fragment>
-        <img src="/images/home_slider_1.jpg"  alt="..." />
+        <img src="/images/home_slider_1.jpg" class  alt="..." />
         <div className="carousel-caption">
             <h5>The Premium System Education</h5>
             <p>Future Of Education Technology</p>

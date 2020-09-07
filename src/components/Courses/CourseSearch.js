@@ -4,15 +4,15 @@ import axios from 'axios'
 
 import '../../assets/css/CoursesSearch.css'
 
-const CourseSearch = () => {
+const CourseSearch = ({ handleChange, handleSelectChange }) => {
 
-    const [courses, updateCourses] = useState([])
+    const [courseNames, updateCourseNames] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:5000/courses?_start=0&_end=6")
+        axios.get("http://localhost:5000/courses")
             .then(res => {
                 res.data.map(elem => {
-                    updateCourses(courseNames => [...courseNames, elem.course])
+                    updateCourseNames(courseNames => [...courseNames, elem.course])
                 })
             })
             .catch(e => console.log(e))
@@ -21,15 +21,16 @@ const CourseSearch = () => {
 
     return (
         <div className="courses-search">
-            <form className="d-flex align-items-center justify-content-start flex-row" action="">
-                <input className="courses-search-input" type="text" placeholder="Search Courses" />
-                <select className="courses-search-select courses-search-input">
-                    <option>All Categories</option>
-                    {courses.map((course, index) => (
-                        <option key={index}>{course}</option>
+            <form className="d-flex align-items-center justify-content-around flex-row">
+                <input className="courses-search-input" onKeyUp={handleChange} type="text" placeholder="Search Courses" />
+                <select 
+                    className="courses-search-select courses-search-input"
+                    onChange={handleSelectChange}>
+                    <option value="all">All Categories</option>
+                    {courseNames.map((course, index) => (
+                        <option key={index} value={course}>{course}</option>
                     ))}
                 </select>
-                <button className="courses-search-button ml-auto">Search Now</button>
             </form>
         </div>
     )

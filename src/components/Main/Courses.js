@@ -17,24 +17,23 @@ const Courses = () => (
                 <Context.Consumer>
                     {context => {
                         return (
-                        <div className="row courses-cards">
-                            {Object.keys(context.data).map( index => {
-                                return(
-                                    <div key={index} className="col-lg-4">
-                                        <Link to={{pathname: `/${context.data[index].id}/${context.data[index].course}`}}>
-                                            <CourseCard
-                                                src={context.data[index].src} 
-                                                title={context.data[index].course} 
-                                                tutor={context.data[index].tutor} 
-                                                price={context.data[index].price} 
-                                                discount
-                                                students={context.data[index].students}
-                                                rating={context.data[index].rating}/>
-                                        </Link>
-
-                                    </div>
-                            )})}
-                        </div>
+                            <div className="row courses-cards">
+                                {Object.keys(context.data).map( index => {
+                                    return(
+                                        <div key={index} className="col-lg-4">
+                                            <Link to={{pathname: `/${context.data[index].id}/${context.data[index].course}`}}>
+                                                <CourseCard
+                                                    src={context.data[index].src} 
+                                                    title={context.data[index].course} 
+                                                    tutor={context.data[index].tutor} 
+                                                    price={context.data[index].price} 
+                                                    discount
+                                                    students={context.data[index].students}
+                                                    rating={context.data[index].rating}/>
+                                            </Link>
+                                        </div>
+                                )})}
+                            </div>
                     )}}
                 </Context.Consumer>
                 <div className="courses-button">

@@ -3,7 +3,6 @@ import React from 'react'
 import '../../assets/css/GeneralCourses.css'
 
 import PageTail      from '../Main/PageTail'
-import CourseSearch  from './CourseSearch'
 import CardContainer from './CardContainer'
 import Categories    from './Categories'
 import LatestCourses from './LatestCourses'
@@ -24,9 +23,7 @@ const Courses = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8">
-                            <CourseSearch />
                             <CardContainer />
-                            
                         </div>
                         <div className="col-lg-4">
                             {/* CATEGORIES */} 

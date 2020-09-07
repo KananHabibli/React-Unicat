@@ -23,12 +23,12 @@ const SingleCourse = () => {
                 <div className="media">
                     <img src="/images/profilepicture.png" className="mr-3" alt="Profile"  width="50"/>
                     <div className="media-body">
-                    <h5 className="mt-0">{course.tutor}</h5>
+                        <h5 className="mt-0">{course.tutor}</h5>
                         Mar 18, 2019 * <span className="badge badge-pill badge-info">Rating: {course.rating}</span> * <i className="fas fa-graduation-cap"></i> {course.students} students
                     </div>
                 </div>
                 <div className="course-image">
-                    <img src={course.src} alt={course.alt}  width="400"/>
+                    <img src={course.src} alt={course.alt} />
                 </div>
                 <div className="course-title">
                     <i className="fas fa-book-open mr-2"></i>{course.course}
