@@ -7,6 +7,8 @@ import Loading from './components/Main/Loading'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 
+import "./App.css"
+
 const About    = lazy(() => import('./components/About/About'));
 const Courses  = lazy(() => import('./components/Courses/Courses'));
 const Blog     = lazy(() => import('./components/Blog/Blog'));
@@ -14,7 +16,6 @@ const Contact  = lazy(() => import('./components/Contact/Contact'));
 const Login    = lazy(() => import('./components/Subscribe/Login'));
 const Register = lazy(() => import('./components/Subscribe/Register'));
 const SingleCourse = lazy(() => import('./components/Courses/SingleCourse'))
-
 
 const App = () => (
     <>
@@ -30,6 +31,7 @@ const App = () => (
             <Route path='/register' component={Register} />
             <Route path='/loading'  component={Loading} />
             <Route path='/:id/:title'  component={SingleCourse} />
+            <Route render={() => <h2 className="text-center error">404 Page not found</h2>} />
           </Switch>
         <Footer />
       </Suspense>

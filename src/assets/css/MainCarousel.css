@@ -1,3 +1,12 @@
+.carousel {
+    width: 100%;
+    overflow:hidden;
+}
+.carousel .carousel-inner {
+    height:100%;    
+}
+
+
 .carousel-control-next, .carousel-control-prev{
     background-color: #b6b7bd;
     border-radius: 50%;
@@ -34,39 +43,25 @@
     color: #384158;
 }
 
+.carousel-item img{
+	width: 100%;
+}
+
 .carousel-caption p{
     font-size: 24px;
     color: #76777a;
     margin-top: 9px;
 }
 
-.home_search_form div
-{
-	width: calc(100% - 140px);
-	height: 46px;
-	background: #FFFFFF;
-	border-radius: 3px;
-}
 .home_search_input
 {
-	width: 33.33333333%;
-	border: none;
+	width: 75%;
+	border: 3px solid #fff;
+	border-radius: 5px;
 	outline: none;
-	height: 25px;
-	padding-left: 20px;
-}
-.home_search_input:not(:last-child)
-{
-	border-right: solid 1px #e5e5e5;
-}
-
-.dropdown_item_select
-{
-	position: relative;
-	background-position: center right;
-	background-repeat: no-repeat;
-	padding-right: 20px;
-	padding-left: 20px;
+	height: 35px;
+	padding: 20px;
+	margin: 0 auto;
 }
 
 .home_search_button

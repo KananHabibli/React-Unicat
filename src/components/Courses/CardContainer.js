@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 
 import '../../assets/css/CardContainer.css'
@@ -29,7 +29,14 @@ const interval = [
     }
 ]
 
-const CardContainer = () => {
+const CardContainer = ({ location }) => {
+
+    let queryString
+    if(location.state.query){
+        queryString = location.state.query
+    } else {
+        queryString = ''
+    }
 
     const [courses, updateCourses] = useState([])
     const [start, setStart] = useState(0)
@@ -42,17 +49,21 @@ const CardContainer = () => {
     }
 
     const handleChange = async event => {
-        updateCourses([])
 
         let value = event.target.value
         const data = await fetchData(`courses?q=${value}&_start=0&_end=6`)
-        data.map(elem => {
-            return updateCourses(courses => [...courses, elem])
-        })
+        updateCourses(data)
+    }
+
+    const handleSearch = async value => {
+
+        const data = await fetchData(`courses?q=${value}`)
+        updateCourses(data)
+
+        location.state.query = null
     }
 
     const handleSelectChange = async event => {
-        updateCourses([])
 
         let value = event.target.value
         let query = ''
@@ -64,26 +75,30 @@ const CardContainer = () => {
         }
 
         const data = await fetchData(query)
-        data.map(elem => {
-            return updateCourses(courses => [...courses, elem])
-        })
+        updateCourses(data)
         
     }
 
     useEffect(() => {
-        (async function() {
-            updateCourses([])
-            const data = await fetchData(`courses?_start=${start}&_end=${end}`)
-            data.map(elem => {
-                return updateCourses(courses => [...courses, elem])
-            })
-        })()
+        if(queryString){
+            console.log(queryString)
+            handleSearch(queryString)
+        } else {
+            (async function() {
+                updateCourses([])
+                console.log('rendered')
+                const data = await fetchData(`courses?_start=${start}&_end=${end}`)
+                data.map(elem => {
+                    return updateCourses(courses => [...courses, elem])
+                })
+            })()
+        }
     }, [start, end])
 
 
     return (
         <Fragment>
-            <CourseSearch  handleChange={handleChange} handleSelectChange={handleSelectChange}/>
+            <CourseSearch value={queryString} handleChange={handleChange} handleSelectChange={handleSelectChange}/>
             <div className="courses-cards">
                 <div className="row">
                     {courses.map((course, index) => (
@@ -108,4 +123,4 @@ const CardContainer = () => {
     )
 }
 
-export default CardContainer
+export default withRouter(CardContainer)

@@ -7,6 +7,8 @@ import fetchData from '../../utils/fetchData'
 
 const SingleCourse = () => {
 
+    console.log(useParams())
+
     let { id } = useParams()
     let [course, setCourse ] = useState({})
 

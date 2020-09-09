@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, createRef } from 'react'
 import axios from 'axios'
 
 
 import '../../assets/css/CoursesSearch.css'
 
-const CourseSearch = ({ handleChange, handleSelectChange }) => {
+const CourseSearch = ({ handleChange, handleSelectChange, handleSearch, value }) => {
 
     const [courseNames, updateCourseNames] = useState([])
+
 
     useEffect(() => {
         axios.get("http://localhost:5000/courses")
@@ -16,13 +17,17 @@ const CourseSearch = ({ handleChange, handleSelectChange }) => {
                 })
             })
             .catch(e => console.log(e))
-        
     }, [])
 
     return (
         <div className="courses-search">
             <form className="d-flex align-items-center justify-content-around flex-row">
-                <input className="courses-search-input" onKeyUp={handleChange} type="text" placeholder="Search Courses" />
+                <input
+                     className="courses-search-input" 
+                     onKeyUp={e => handleChange(e)}
+                     type="text" 
+                     placeholder="Search Courses"
+                     defaultValue={value} />
                 <select 
                     className="courses-search-select courses-search-input"
                     onChange={handleSelectChange}>
