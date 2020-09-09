@@ -32,7 +32,7 @@ const interval = [
 const CardContainer = ({ location }) => {
 
     let queryString
-    if(location.state.query){
+    if(location.state){
         queryString = location.state.query
     } else {
         queryString = ''
