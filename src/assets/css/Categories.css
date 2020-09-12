@@ -26,6 +26,10 @@
     height: 51px;
 }
 
+.categories-list li:hover {
+    margin-left: 10px;
+}
+
 .categories-list li a{
     display: block;
     position: relative;

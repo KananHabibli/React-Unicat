@@ -20,9 +20,6 @@ const Blog = () => {
                             <BlogContainer />
                         </div>
                     </div>
-                    <div className="loadMore text-center">
-                        <a href="#">Load More</a>
-                    </div>
                 </div>
             </div>
 

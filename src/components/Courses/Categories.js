@@ -9,10 +9,10 @@ const Categories = () => (
             </div>
             <ul className="categories-list">
                 <li>
-                    <a href="#">Art & Design</a>
+                    <a href="#">Web Design</a>
                 </li>
                 <li>
-                    <a href="#">Business</a>
+                    <a href="#">Business and Finance</a>
                 </li>
                 <li>
                     <a href="#">IT & Software</a>
@@ -21,7 +21,7 @@ const Categories = () => (
                     <a href="#">Languages</a>
                 </li>
                 <li>
-                    <a href="#">Programming</a>
+                    <a href="#">Data Structure and Algorithms</a>
                 </li>
             </ul>
         </div>

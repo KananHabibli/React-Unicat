@@ -1,0 +1,125 @@
+.profile{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    max-width: 95vw !important;
+}
+
+.profile-sidebar{
+    background-color: rgb(20 189 238);
+    min-height: 100vh;
+}
+
+.profile-info{
+    margin-top: 200px;
+    padding: 0 0 50px 50px;
+    min-height: 100vh;
+    font-size: 20px;
+}
+
+.profile-sidebar-list{
+    margin-top: 200px;
+    padding-left: 0;
+}
+
+.profile-sidebar-list li{
+    padding: 10px 10px 10px 25px;
+    font-size: 19px;
+	font-weight: 700;
+	color: #384158;
+    margin: 15px 0;
+}
+
+.profile-sidebar-list li:hover{
+    color: #14bdee;
+}
+
+.active, .profile-sidebar-list li:hover{
+    background-color: #fff;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+}
+
+.active{
+    display: block;
+    border: inherit;
+    padding: inherit;
+    width: inherit;
+}
+
+.profile-title{
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.profile-position{
+    font-size: 19px;
+    margin-left: 10px;
+}
+
+.profile-social{
+    padding-left: 0;
+    margin-left: 10px;
+}
+
+.profile-social li{
+    display: inline-block;
+    margin: 10px 0;
+    margin-right: 10px;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    background: rgb(20 189 238);
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: all 200ms ease;
+}
+
+.profile-social li:hover{
+    border: 1px solid rgb(20 189 238);
+    background-color: #fff;
+}
+.profile-social li:hover a i{
+    color: rgb(20 189 238);
+}
+
+
+.profile-social li a{
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.profile-social li a i{
+    color: #fff;
+}
+
+.profile-records{
+    padding-left: 0;
+    font-size: 25px;
+    color: #000;
+}
+
+.profile-records li{
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.profile-records li span:first-child{
+    display: block;
+}
+
+.profile-records li span:last-child{
+    color: rgb(165 165 165);
+}
+
+.profile-body{
+    text-align: justify;
+    width: 75%;
+    font-size: 18px;
+    margin: 10px auto !important;
+}

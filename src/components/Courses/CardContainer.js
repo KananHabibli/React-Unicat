@@ -1,7 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
-
 import '../../assets/css/CardContainer.css'
 
 import CourseCard from './CourseCard'
@@ -9,7 +8,7 @@ import Pagination    from './Pagination'
 import CourseSearch from './CourseSearch'
 
 import fetchData from '../../utils/fetchData'
-
+import encodeURL from '../../utils/encodeURL'
 const interval = [
     {
         start: 0,
@@ -86,11 +85,9 @@ const CardContainer = ({ location }) => {
         } else {
             (async function() {
                 updateCourses([])
-                console.log('rendered')
+                console.log('CardContainer rendered')
                 const data = await fetchData(`courses?_start=${start}&_end=${end}`)
-                data.map(elem => {
-                    return updateCourses(courses => [...courses, elem])
-                })
+                updateCourses(data)
             })()
         }
     }, [start, end])
@@ -103,7 +100,7 @@ const CardContainer = ({ location }) => {
                 <div className="row">
                     {courses.map((course, index) => (
                         <div key={index} className="col-lg-6">
-                            <Link to={{pathname: `/${course.id}/${course.course}`}}>
+                            <Link to={{pathname: `/${course.id}/${encodeURL(course.course)}`}}>
                                 <CourseCard
                                     src={course.src} 
                                     title={course.course} 

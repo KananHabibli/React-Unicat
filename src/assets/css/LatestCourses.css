@@ -2,15 +2,15 @@
 .latest-courses{
     font-family: 'Roboto Slab', serif;
     margin-bottom: 40px;
+    padding: 10px;
 }
 
 .latest-title{
     font-size: 24px;
     font-weight: 700;
     color: rgb(56, 65, 88);
-    line-height: 0.75;
 }
 
 .list-unstyled{
-    margin-top: 31px;
+    margin-top: 30px;
 }

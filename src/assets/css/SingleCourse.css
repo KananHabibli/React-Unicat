@@ -1,10 +1,9 @@
 .singleCourse{
     font-family: 'Roboto', sans-serif;
     margin-top: 150px;
-    height: 75vh;
-    padding: 20px 40px;
-    margin-bottom:  30px;
-    box-shadow: 0px 1px 10px rgba(29,34,47,0.1);
+    margin-bottom: 50px;
+    padding: 45px;
+    box-shadow: 10px 10px 10px 10px rgba(29,34,47,0.1);
     border-radius: 5px;
 }
 
@@ -15,7 +14,7 @@
 }
 
 .course-image img{
-    width: 50%;
+    width: 100%;
     display: block;
     margin: 0 auto;
     border-radius: 3px;
@@ -36,11 +35,13 @@
 
 .course-body{
     text-align: justify;
-    /* width: 75%;
-    margin: 0 auto; */
     font-size: 17px;
     color: #000;
 }
+/* 
+.course-body p{
+    min-height: 50vh;
+} */
 
 .badge-info{
     color: #fff !important;

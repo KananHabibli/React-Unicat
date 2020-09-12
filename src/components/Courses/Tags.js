@@ -8,12 +8,12 @@ const Tags = () => (
             Tags
         </div>
         <ul className="tags-list">
-            <li><a href="#">Creative   </a></li>
-            <li><a href="#">Unique     </a></li>
-            <li><a href="#">Photography</a></li>
-            <li><a href="#">Ideas      </a></li>
-            <li><a href="#">Wordpress  </a></li>
-            <li><a href="#">Startup    </a></li>
+            <li><a href="#">Technology   </a></li>
+            <li><a href="#">Web design     </a></li>
+            <li><a href="#">Front End</a></li>
+            <li><a href="#">Mobile      </a></li>
+            <li><a href="#">Business  </a></li>
+            <li><a href="#">Back end    </a></li>
         </ul>
     </div>
 )

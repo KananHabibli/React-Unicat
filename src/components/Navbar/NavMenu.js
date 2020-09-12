@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 
+import { AuthContext } from '../../context/Auth'
 import '../../assets/css/NavMenu.css'
 
 const NavMenu = props => {
+
+    const [profile, setProfile] = useState(null)
+    const [currentUser, setCurrentUser] = useState(useContext(AuthContext))
+
+    const checkAuth = () => {
+        if(currentUser){
+            setProfile(
+                <li className="nav-elem">
+                    <NavLink activeClassName="linkActive" to="/profile">My Profile</NavLink>
+                </li>  )
+        } else {
+            setProfile(null)
+        }
+    }
+
+    useEffect(() => {
+        checkAuth()
+    }, [currentUser])
+
+
     return (
         <div className="nav-menu">
             <div className="container">
@@ -30,12 +51,10 @@ const NavMenu = props => {
                                     <li className="nav-elem">
                                         <NavLink activeClassName="linkActive" to="/contact">Contact</NavLink>
                                     </li>
+                                    {profile}
                                 </ul>
                                 <div className="search-button">
                                     <i className="fas fa-search" ></i>
-                                </div>
-                                <div className="shopping-cart">
-                                    <i className="fas fa-shopping-cart"></i>
                                 </div>
                                 <div className="sidebar-open">
                                     <i className="fas fa-bars"></i>

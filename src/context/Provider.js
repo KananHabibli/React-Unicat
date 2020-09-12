@@ -13,7 +13,6 @@ const Provider = ({ children }) => {
                 updateCourses(courses => [...courses, elem])
             })
         })()
-        console.log(courses)
     }, [])
 
     return (
