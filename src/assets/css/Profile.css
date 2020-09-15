@@ -33,14 +33,14 @@
     color: #14bdee;
 }
 
-.active, .profile-sidebar-list li:hover{
+.profile-sidebar-elem__active, .profile-sidebar-elem:hover{
     background-color: #fff;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     cursor: pointer;
 }
 
-.active{
+.profile-sidebar-elem__active{
     display: block;
     border: inherit;
     padding: inherit;
@@ -48,10 +48,10 @@
 }
 
 .profile-title{
-    font-size: 22px;
+    font-size: 24px;
     color: #000;
     font-weight: bold;
-    margin-left: 10px;
+    margin: 20px 0 20px 10px;
 }
 
 .profile-position{

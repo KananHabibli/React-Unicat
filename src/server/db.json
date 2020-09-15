@@ -458,31 +458,581 @@
       "title": "Here's What You Need to Know About Online Testing"
     }
   ],
-  "signup": [
+  "countries": [
     {
-      "username": "King",
-      "email": "heroku1@gmail.com",
-      "password": "iostream14",
-      "id": 1
+      "id": 1,
+      "name": "Afghanistan",
+      "capital": "Kabul"
     },
     {
-      "username": "John Doe",
-      "email": "johndoe1@gmail.com",
-      "password": "iostream14",
-      "id": 2
+      "id": 2,
+      "name": "Åland Islands",
+      "capital": "Mariehamn"
     },
     {
-      "username": "John Doe",
-      "email": "johndoe2@gmail.com",
-      "password": "iostream14",
-      "id": 3
+      "id": 3,
+      "name": "Albania",
+      "capital": "Tirana"
     },
     {
-      "username": "King",
-      "email": "hebibli90@inbox.ru",
-      "password": "iostream14",
-      "id": 4
+      "id": 4,
+      "name": "Algeria",
+      "capital": "Algiers"
+    },
+    {
+      "id": 5,
+      "name": "American Samoa",
+      "capital": "Pago Pago"
+    },
+    {
+      "id": 6,
+      "name": "Andorra",
+      "capital": "Andorra la Vella"
+    },
+    {
+      "id": 7,
+      "name": "Angola",
+      "capital": "Luanda"
+    },
+    {
+      "id": 8,
+      "name": "Anguilla",
+      "capital": "The Valley"
+    },
+    {
+      "id": 9,
+      "name": "Antarctica",
+      "capital": ""
+    },
+    {
+      "id": 10,
+      "name": "Antigua and Barbuda",
+      "capital": "Saint John's"
+    },
+    {
+      "id": 11,
+      "name": "Argentina",
+      "capital": "Buenos Aires"
+    },
+    {
+      "id": 12,
+      "name": "Armenia",
+      "capital": "Yerevan"
+    },
+    {
+      "id": 13,
+      "name": "Aruba",
+      "capital": "Oranjestad"
+    },
+    {
+      "id": 14,
+      "name": "Australia",
+      "capital": "Canberra"
+    },
+    {
+      "id": 15,
+      "name": "Austria",
+      "capital": "Vienna"
+    },
+    {
+      "id": 16,
+      "name": "Azerbaijan",
+      "capital": "Baku"
+    },
+    {
+      "id": 17,
+      "name": "Bahamas",
+      "capital": "Nassau"
+    },
+    {
+      "id": 18,
+      "name": "Bahrain",
+      "capital": "Manama"
+    },
+    {
+      "id": 19,
+      "name": "Bangladesh",
+      "capital": "Dhaka"
+    },
+    {
+      "id": 20,
+      "name": "Barbados",
+      "capital": "Bridgetown"
+    },
+    {
+      "id": 21,
+      "name": "Belarus",
+      "capital": "Minsk"
+    },
+    {
+      "id": 22,
+      "name": "Belgium",
+      "capital": "Brussels"
+    },
+    {
+      "id": 23,
+      "name": "Belize",
+      "capital": "Belmopan"
+    },
+    {
+      "id": 24,
+      "name": "Benin",
+      "capital": "Porto-Novo"
+    },
+    {
+      "id": 25,
+      "name": "Bermuda",
+      "capital": "Hamilton"
+    },
+    {
+      "id": 26,
+      "name": "Bhutan",
+      "capital": "Thimphu"
+    },
+    {
+      "id": 27,
+      "name": "Bolivia (Plurinational State of)",
+      "capital": "Sucre"
+    },
+    {
+      "id": 28,
+      "name": "Bonaire, Sint Eustatius and Saba",
+      "capital": "Kralendijk"
+    },
+    {
+      "id": 29,
+      "name": "Bosnia and Herzegovina",
+      "capital": "Sarajevo"
+    },
+    {
+      "id": 30,
+      "name": "Botswana",
+      "capital": "Gaborone"
+    },
+    {
+      "id": 31,
+      "name": "Bouvet Island",
+      "capital": ""
+    },
+    {
+      "id": 32,
+      "name": "Brazil",
+      "capital": "Brasília"
+    },
+    {
+      "id": 33,
+      "name": "British Indian Ocean Territory",
+      "capital": "Diego Garcia"
+    },
+    {
+      "id": 34,
+      "name": "United States Minor Outlying Islands",
+      "capital": ""
+    },
+    {
+      "id": 35,
+      "name": "Virgin Islands (British)",
+      "capital": "Road Town"
+    },
+    {
+      "id": 36,
+      "name": "Virgin Islands (U.S.)",
+      "capital": "Charlotte Amalie"
+    },
+    {
+      "id": 37,
+      "name": "Brunei Darussalam",
+      "capital": "Bandar Seri Begawan"
+    },
+    {
+      "id": 38,
+      "name": "Bulgaria",
+      "capital": "Sofia"
+    },
+    {
+      "id": 39,
+      "name": "Burkina Faso",
+      "capital": "Ouagadougou"
+    },
+    {
+      "id": 40,
+      "name": "Burundi",
+      "capital": "Bujumbura"
+    },
+    {
+      "id": 41,
+      "name": "Cambodia",
+      "capital": "Phnom Penh"
+    },
+    {
+      "id": 42,
+      "name": "Cameroon",
+      "capital": "Yaoundé"
+    },
+    {
+      "id": 43,
+      "name": "Canada",
+      "capital": "Ottawa"
+    },
+    {
+      "id": 44,
+      "name": "Cabo Verde",
+      "capital": "Praia"
+    },
+    {
+      "id": 45,
+      "name": "Cayman Islands",
+      "capital": "George Town"
+    },
+    {
+      "id": 46,
+      "name": "Central African Republic",
+      "capital": "Bangui"
+    },
+    {
+      "id": 47,
+      "name": "Chad",
+      "capital": "N'Djamena"
+    },
+    {
+      "id": 48,
+      "name": "Chile",
+      "capital": "Santiago"
+    },
+    {
+      "id": 49,
+      "name": "China",
+      "capital": "Beijing"
+    },
+    {
+      "id": 50,
+      "name": "Christmas Island",
+      "capital": "Flying Fish Cove"
+    },
+    {
+      "id": 51,
+      "name": "Cocos (Keeling) Islands",
+      "capital": "West Island"
+    },
+    {
+      "id": 52,
+      "name": "Colombia",
+      "capital": "Bogotá"
+    },
+    {
+      "id": 53,
+      "name": "Comoros",
+      "capital": "Moroni"
+    },
+    {
+      "id": 54,
+      "name": "Congo",
+      "capital": "Brazzaville"
+    },
+    {
+      "id": 55,
+      "name": "Congo (Democratic Republic of the)",
+      "capital": "Kinshasa"
+    },
+    {
+      "id": 56,
+      "name": "Cook Islands",
+      "capital": "Avarua"
+    },
+    {
+      "id": 57,
+      "name": "Costa Rica",
+      "capital": "San José"
+    },
+    {
+      "id": 58,
+      "name": "Croatia",
+      "capital": "Zagreb"
+    },
+    {
+      "id": 59,
+      "name": "Cuba",
+      "capital": "Havana"
+    },
+    {
+      "id": 60,
+      "name": "Curaçao",
+      "capital": "Willemstad"
+    },
+    {
+      "id": 61,
+      "name": "Cyprus",
+      "capital": "Nicosia"
+    },
+    {
+      "id": 62,
+      "name": "Czech Republic",
+      "capital": "Prague"
+    },
+    {
+      "id": 63,
+      "name": "Denmark",
+      "capital": "Copenhagen"
+    },
+    {
+      "id": 64,
+      "name": "Djibouti",
+      "capital": "Djibouti"
+    },
+    {
+      "id": 65,
+      "name": "Dominica",
+      "capital": "Roseau"
+    },
+    {
+      "id": 66,
+      "name": "Dominican Republic",
+      "capital": "Santo Domingo"
+    },
+    {
+      "id": 67,
+      "name": "Ecuador",
+      "capital": "Quito"
+    },
+    {
+      "id": 68,
+      "name": "Egypt",
+      "capital": "Cairo"
+    },
+    {
+      "id": 69,
+      "name": "El Salvador",
+      "capital": "San Salvador"
+    },
+    {
+      "id": 70,
+      "name": "Equatorial Guinea",
+      "capital": "Malabo"
+    },
+    {
+      "id": 71,
+      "name": "Eritrea",
+      "capital": "Asmara"
+    },
+    {
+      "id": 72,
+      "name": "Estonia",
+      "capital": "Tallinn"
+    },
+    {
+      "id": 73,
+      "name": "Ethiopia",
+      "capital": "Addis Ababa"
+    },
+    {
+      "id": 74,
+      "name": "Falkland Islands (Malvinas)",
+      "capital": "Stanley"
+    },
+    {
+      "id": 75,
+      "name": "Faroe Islands",
+      "capital": "Tórshavn"
+    },
+    {
+      "id": 76,
+      "name": "Fiji",
+      "capital": "Suva"
+    },
+    {
+      "id": 77,
+      "name": "Finland",
+      "capital": "Helsinki"
+    },
+    {
+      "id": 78,
+      "name": "France",
+      "capital": "Paris"
+    },
+    {
+      "id": 79,
+      "name": "French Guiana",
+      "capital": "Cayenne"
+    },
+    {
+      "id": 80,
+      "name": "French Polynesia",
+      "capital": "Papeetē"
+    },
+    {
+      "id": 81,
+      "name": "French Southern Territories",
+      "capital": "Port-aux-Français"
+    },
+    {
+      "id": 82,
+      "name": "Gabon",
+      "capital": "Libreville"
+    },
+    {
+      "id": 83,
+      "name": "Gambia",
+      "capital": "Banjul"
+    },
+    {
+      "id": 84,
+      "name": "Georgia",
+      "capital": "Tbilisi"
+    },
+    {
+      "id": 85,
+      "name": "Germany",
+      "capital": "Berlin"
+    },
+    {
+      "id": 86,
+      "name": "Ghana",
+      "capital": "Accra"
+    },
+    {
+      "id": 87,
+      "name": "Gibraltar",
+      "capital": "Gibraltar"
+    },
+    {
+      "id": 88,
+      "name": "Greece",
+      "capital": "Athens"
+    },
+    {
+      "id": 89,
+      "name": "Greenland",
+      "capital": "Nuuk"
+    },
+    {
+      "id": 90,
+      "name": "Grenada",
+      "capital": "St. George's"
+    },
+    {
+      "id": 91,
+      "name": "Guadeloupe",
+      "capital": "Basse-Terre"
+    },
+    {
+      "id": 92,
+      "name": "Guam",
+      "capital": "Hagåtña"
+    },
+    {
+      "id": 93,
+      "name": "Guatemala",
+      "capital": "Guatemala City"
+    },
+    {
+      "id": 94,
+      "name": "Guernsey",
+      "capital": "St. Peter Port"
+    },
+    {
+      "id": 95,
+      "name": "Guinea",
+      "capital": "Conakry"
+    },
+    {
+      "id": 96,
+      "name": "Guinea-Bissau",
+      "capital": "Bissau"
+    },
+    {
+      "id": 97,
+      "name": "Guyana",
+      "capital": "Georgetown"
+    },
+    {
+      "id": 98,
+      "name": "Haiti",
+      "capital": "Port-au-Prince"
+    },
+    {
+      "id": 99,
+      "name": "Heard Island and McDonald Islands",
+      "capital": ""
+    },
+    {
+      "id": 100,
+      "name": "Holy See",
+      "capital": "Rome"
+    },
+    {
+      "id": 101,
+      "name": "Honduras",
+      "capital": "Tegucigalpa"
+    },
+    {
+      "id": 102,
+      "name": "Hong Kong",
+      "capital": "City of Victoria"
+    },
+    {
+      "id": 103,
+      "name": "Hungary",
+      "capital": "Budapest"
+    },
+    {
+      "id": 104,
+      "name": "Iceland",
+      "capital": "Reykjavík"
+    },
+    {
+      "id": 105,
+      "name": "India",
+      "capital": "New Delhi"
+    },
+    {
+      "id": 106,
+      "name": "Indonesia",
+      "capital": "Jakarta"
+    },
+    {
+      "id": 107,
+      "name": "Côte d'Ivoire",
+      "capital": "Yamoussoukro"
+    },
+    {
+      "id": 108,
+      "name": "Iran (Islamic Republic of)",
+      "capital": "Tehran"
+    },
+    {
+      "id": 109,
+      "name": "Iraq",
+      "capital": "Baghdad"
+    },
+    {
+      "id": 110,
+      "name": "Ireland",
+      "capital": "Dublin"
+    },
+    {
+      "id": 111,
+      "name": "Isle of Man",
+      "capital": "Douglas"
+    },
+    {
+      "id": 112,
+      "name": "Israel",
+      "capital": "Jerusalem"
+    },
+    {
+      "id": 113,
+      "name": "Italy",
+      "capital": "Rome"
+    },
+    {
+      "id": 114,
+      "name": "Jamaica",
+      "capital": "Kingston"
+    },
+    {
+      "id": 115,
+      "name": "Japan",
+      "capital": "Tokyo"
     }
-  ],
-  "signin": []
+  ]
 }

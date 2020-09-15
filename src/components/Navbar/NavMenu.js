@@ -13,7 +13,7 @@ const NavMenu = props => {
         if(currentUser){
             setProfile(
                 <li className="nav-elem">
-                    <NavLink activeClassName="linkActive" to="/profile">My Profile</NavLink>
+                    <NavLink activeClassName="linkActive" to="/profile/info">My Profile</NavLink>
                 </li>  )
         } else {
             setProfile(null)
@@ -21,6 +21,7 @@ const NavMenu = props => {
     }
 
     useEffect(() => {
+        console.log('navbar rendered')
         checkAuth()
     }, [currentUser])
 

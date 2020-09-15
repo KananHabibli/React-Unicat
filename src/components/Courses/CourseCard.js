@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 
-const CourseCard = ({src, title, tutor, students, rating, price, discount}) =>  (
-    <div className="card">
+const CourseCard = ({src, title, tutor, students, rating, price, discount, profileClass}) =>  (
+    <div className= "card">
         <img src={src} className="card-img-top" alt={src}/>
         <div className="card-body">
             <h5 className="card-title">{title}</h5>
@@ -19,7 +19,7 @@ const CourseCard = ({src, title, tutor, students, rating, price, discount}) =>  
                         <i className="fas fa-star"></i>{rating}
                     </div>
                     <div className="card-footer-price ml-auto">
-                        <span>{discount}</span> {price}
+                       {price}
                     </div>
                 </div>
             </div>

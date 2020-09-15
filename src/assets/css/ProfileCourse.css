@@ -1,0 +1,9 @@
+
+.profile-course{
+    width: 70%;
+    height: 70%;
+    margin: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px 10px rgba(29,34,47,0.1);
+}

@@ -8,7 +8,6 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import { AuthProvider } from './context/Auth'
 
-
 import "./App.css"
 
 const About    = lazy(() => import('./components/About/About'));
@@ -20,7 +19,8 @@ const Register = lazy(() => import('./components/Subscribe/Register'));
 const Profile = lazy(() => import('./components/Subscribe/Profile'));
 const SingleCourse = lazy(() => import('./components/Courses/SingleCourse'))
 
-const App = () => (
+const App = () => {
+  return (
     <AuthProvider>
       <Suspense fallback={<Loading />}>
         <Navbar />
@@ -41,6 +41,6 @@ const App = () => (
       </Suspense>
     </AuthProvider>
   )
-
+}
 
 export default App;

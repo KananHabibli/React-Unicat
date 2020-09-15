@@ -10,7 +10,7 @@ const MediaCard = ({src, alt, title, price}) => {
                 <h5 className="mt-0 mb-1">
                     <a href="#">{title}</a>
                 </h5>
-                <span>{price}</span>
+                <span className="media-price">{price}</span>
             </div>
         </li>
     )

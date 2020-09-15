@@ -17,6 +17,7 @@ const Carousel = () => {
     useEffect(() => {
         (async function() {
             const data = await fetchData('partnerList')
+            updatePartners(data)
             data.map(elem => {
                 updatePartners(partners => [...partners, elem])
             })

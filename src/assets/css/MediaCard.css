@@ -15,7 +15,7 @@
     color: #14bdee;
 }
 
-.media-body span{
+.media-body .media-price{
     font-size: 14px;
     font-weight: 700;
     color: rgb(20, 189, 238);
