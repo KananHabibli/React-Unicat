@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-
+import {  withRouter } from 'react-router-dom'
 import "../../assets/css/Pagination.css"
 
 const pages = [1, 2, 3, 4]
 const interval = ['1-6', '6-12', '12-18', '18-24']
 
-const Pagination = ({ fetch }) => {
+const Pagination = ({ fetch, location }) => {
 
     const [currentPage, setCurrentPage] = useState( localStorage.getItem('currentPage') || 1)
     const [nextDisplay, setNext] = useState('inline-block')
@@ -49,7 +49,9 @@ const Pagination = ({ fetch }) => {
     useEffect(() => {
         checkButtons()
         fetch(currentPage)
-
+        if(location.query){
+            location.state.query = null
+        }
         return function cleanup() {
             localStorage.setItem('currentPage', 1)
         }
@@ -95,4 +97,4 @@ const Pagination = ({ fetch }) => {
     )
 }
 
-export default Pagination
+export default withRouter(Pagination)

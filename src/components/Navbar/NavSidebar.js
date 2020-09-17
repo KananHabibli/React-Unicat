@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import '../../assets/css/NavSidebar.css'
 
-const NavSidebar = props => {
+const NavSidebar = () => {
     return (
         <div className="sidebar-menu">
             <div className="sidebar-close-container">

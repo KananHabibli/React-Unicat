@@ -28,15 +28,15 @@ const ProfileCourses = () => {
             <h2 className="profile-title text-center">My Courses</h2>
             <ul className="list-unstyled">
                 {myCourses.map((course, index) => (
-                        <MyCourse
-                            key={course.id}
-                            id={course.id}
-                            src={course.src} 
-                            title={course.course} 
-                            tutor={course.tutor} 
-                            price={course.price} 
-                            discount
-                            students={course.students}
+                    <MyCourse
+                        key={course.id}
+                        id={course.id}
+                        src={course.src} 
+                        title={course.course} 
+                        tutor={course.tutor} 
+                        price={course.price} 
+                        discount
+                        students={course.students}
                             rating={course.rating} />
                 ))}
             </ul>

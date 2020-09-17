@@ -46,6 +46,14 @@ header.scrolled .nav-text
     color: #353535;
 }
 
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
 
 @media (max-width: 992px) {
     .nav-info ul{
@@ -56,6 +64,14 @@ header.scrolled .nav-text
     }
     .sidebar-open{
         display: inline-block;
+    }
+    header.scrolled
+    {
+        top: 0;
+    }
+    header.scrolled .nav-menu
+    {
+        height: 75px;
     }
 }
 

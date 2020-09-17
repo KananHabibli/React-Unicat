@@ -1,70 +1,54 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { withRouter } from "react-router";
+import { isEmail } from "validator"
 
 import '../../assets/css/Login.css'
 import app from '../../firebase'
-import Required from './Required';
-import ValidEmail from './ValidEmail';
 import fetchData from '../../utils/fetchData'
 
-const vusername = (value) => {
-    if (value.length < 3 || value.length > 20) {
-      return (
-        <div className="alert alert-danger" role="alert">
-          The username must be between 3 and 20 characters.
-        </div>
-      );
-    }
-};
-  
-const vpassword = (value) => {
-    if (value.length < 6 || value.length > 40) {
-      return (
-        <div className="alert alert-danger" role="alert">
-          The password must be between 6 and 40 characters.
-        </div>
-      );
-    }
-};
-
-const ConfirmPassword = (value) => {
-    if (value.length < 6 || value.length > 40) {
-      return (
-        <div className="alert alert-danger" role="alert">
-          The password must be between 6 and 40 characters.
-        </div>
-      );
-    }
-};
+import ValidEmail from './ValidEmail'
+import Required from './Required'
+import MatchPassword from './MatchPassword'
 
 
 const Register = ({ history }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [confirmPassword, setconfirmPassword] = useState('')
   const [countries, setCountries] = useState([])
   const [city, setCity] = useState('')
   const [country, setCountry] = useState('')
 
+  const [error, setError] = useState('')
+  const [nameError, setNameError] = useState('')
+  const [emailError, setEmailError] = useState('')
+  const [passwordError, setPasswordError] = useState('')
+  const [matchError, setMatchError] = useState('')
+
   const handleEmail = (e) => {
-    console.log(e.target.value)
+    setEmailError('')
     setEmail(e.target.value)
   }
 
   const handleName = (e) => {
-    console.log(e.target.value)
+    setNameError('')
     setName(e.target.value)
   }
 
   const handlePassword = (e) => {
-    console.log(e.target.value)
+    setPasswordError('')
     setPassword(e.target.value)
+  }
+
+  const handleConfirmPassword = (e) => {
+    setconfirmPassword(e.target.value)
   }
 
   const handleSelect = (e) => {
     let arr = e.target.value.split('/')
-    console.log(arr)
+
     setCity(arr[1])
     setCountry(arr[0])
   }
@@ -79,37 +63,58 @@ const Register = ({ history }) => {
 
   const handleSignUp = async event => {
     event.preventDefault();
-    try {
-      console.log(email)
-      console.log(password)
-      await app
-        .auth()
-        .createUserWithEmailAndPassword(email, password)
-        .then(result => {
-          return result.user.updateProfile({
-            displayName: name,
-            country,
-            city
-          })
-        });
-      history.push("/profile/info");
-    } catch (error) {
-      alert(error);
+
+    if(!name){
+      setNameError(<Required />)
+      setError(error => [...error, 'name'])
+    }
+
+    if(!email){
+      setEmailError(<Required />)
+      setError(error => [...error, 'email'])
+    } else if(!isEmail(email)){
+      setEmailError(<ValidEmail />)
+      setError(error => [...error, 'emailValidation'])
+    }
+
+    if(!password){
+      setPasswordError(<Required />)
+      setError(error => [...error, 'password'])
+    }
+
+    if(password !== confirmPassword){
+      setMatchError(<MatchPassword />)
+      setError(error => [...error, 'matchError'])
+    }
+
+    if(!error){
+      try {
+        await app
+          .auth()
+          .createUserWithEmailAndPassword(email, password)
+          .then(result => {
+            return result.user.updateProfile({
+              displayName: `${name}/${country}/${city}`
+            })
+          });
+        history.push("/login");
+      } catch (error) {
+        console.log(error)
+      }
     }
   };
+
 
 
   useEffect(() => {
     (async function() {
       const data = await fetchData('countries')
-      console.log(data)
       setCountries(data)
     })()
   }, [])
 
     return (
       <main className="main-login">
-        <div className="register-background"></div>
 
         <div className="register-form">
             <div className="register-form-title">
@@ -119,14 +124,17 @@ const Register = ({ history }) => {
                 <div>
                     <label htmlFor="name">Full Name</label>
                     <input className="register-form-input" name="name" type="text" placeholder="John Doe" value={name} onChange={e => handleName(e)}  />
+                    {nameError}
                 </div>
                 <div>
                     <label htmlFor="email">Email</label>
                     <input className="register-form-input" name="email" type="email" placeholder="johndoe@gmail.com" value={email} onChange={e => handleEmail(e)}  />
+                    {emailError}
                 </div>
                 <div>
                   <label htmlFor="country">Country</label>
                   <select onChange={handleSelect} className="register-form-select">
+                    <option>Choose your country</option>
                     {countries.map(country => (
                       <option key={country.id} value={`${country.name}/${country.capital}`}>{country.name}</option>
                     ))}
@@ -139,10 +147,13 @@ const Register = ({ history }) => {
                 <div>
                     <label htmlFor="password">Password</label>
                     <input className="register-form-input" name="password" type="password" placeholder="*******" onChange={handlePassword}/>
+                    {passwordError}
+                    {matchError}
                 </div>
                 <div>
-                    <label htmlFor="passwordConfirm">Confirm Password</label>
-                    <input className="register-form-input" type="password"  placeholder="*******" />
+                    <label htmlFor="confirmPassword">Confirm Password</label>
+                    <input className="register-form-input" type="password"  placeholder="*******" onChange={handleConfirmPassword} />
+                    {matchError}
                 </div>
                 <div className="register-button mx-auto">
                   <button onClick={handleSignUp} type="submit" className="btn">

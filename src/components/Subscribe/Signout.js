@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import app from '../../firebase'
-import { Redirect } from "react-router";
+import { AuthContext } from '../../context/Auth'
+import {  withRouter } from "react-router";
 
-const Signout = () => {
-    app.auth().signOut()
+const Signout = ({ history }) => {
+    const { dispatch } = useContext(AuthContext)
+    app.auth().signOut().then(res => {
+        dispatch({
+            type: "LOGOUT"
+        })
+        window.location.reload()
+        history.push('/')
+    })
+    .catch(e => console.log(e))
     return (
-        <Redirect to="/" />
+        <></>
     )
 }
 
-export default Signout
+export default withRouter(Signout)

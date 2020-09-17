@@ -4,13 +4,14 @@ import { NavLink } from 'react-router-dom'
 import { AuthContext } from '../../context/Auth'
 import '../../assets/css/NavMenu.css'
 
-const NavMenu = props => {
+const NavMenu = ({ toggleDisplay }) => {
 
     const [profile, setProfile] = useState(null)
-    const [currentUser, setCurrentUser] = useState(useContext(AuthContext))
+    const { state } = useContext(AuthContext)
+    const { isAuthenticated } = state
 
     const checkAuth = () => {
-        if(currentUser){
+        if(isAuthenticated){
             setProfile(
                 <li className="nav-elem">
                     <NavLink activeClassName="linkActive" to="/profile/info">My Profile</NavLink>
@@ -21,9 +22,8 @@ const NavMenu = props => {
     }
 
     useEffect(() => {
-        console.log('navbar rendered')
         checkAuth()
-    }, [currentUser])
+    }, [])
 
 
     return (
@@ -32,7 +32,7 @@ const NavMenu = props => {
                 <div className="row">
                     <div className="col">
                         <div className="d-flex flex-row align-items-center justify-content-start mb-2">
-                            <NavLink activeClassName="" to="/" className="nav-logo">
+                            <NavLink activeClassName="" to="/" className="nav-logo" onClick={() => window.location.reload()}>
                                 <div className="nav-text">Unic<span>at</span></div>
                             </NavLink>
                             <div className="ml-auto">
@@ -54,7 +54,7 @@ const NavMenu = props => {
                                     </li>
                                     {profile}
                                 </ul>
-                                <div className="search-button">
+                                <div className="search-button" onClick={toggleDisplay}>
                                     <i className="fas fa-search" ></i>
                                 </div>
                                 <div className="sidebar-open">

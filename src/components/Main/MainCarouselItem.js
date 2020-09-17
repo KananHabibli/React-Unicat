@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
-const MainCarouselItem = ({ courseNames }) => {
+const MainCarouselItem = () => {
 
     const [input, setInput] = useState('')
     const [toCourse, setToCourse] = useState(false)

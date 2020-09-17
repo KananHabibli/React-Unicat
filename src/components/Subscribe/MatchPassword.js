@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Required = () => (
+const ValidEmail = () => (
   <div className="alert alert-danger mt-4" role="alert">
-    This field is required!
+    Passwords must match.
   </div>
 )
 
-export default Required
+export default ValidEmail

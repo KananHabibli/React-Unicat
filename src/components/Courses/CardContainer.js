@@ -29,7 +29,7 @@ const interval = [
 ]
 
 const CardContainer = ({ location }) => {
-
+    console.log(location)
     let queryString
     if(location.state){
         queryString = location.state.query

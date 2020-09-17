@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useContext } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 
@@ -6,7 +6,7 @@ import Unicat from './container/Unicat'
 import Loading from './components/Main/Loading'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
-import { AuthProvider } from './context/Auth'
+import { AuthProvider, AuthContext } from './context/Auth'
 
 import "./App.css"
 

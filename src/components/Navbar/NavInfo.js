@@ -1,8 +1,33 @@
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
+
+import { AuthContext } from '../../context/Auth'
 import '../../assets/css/NavInfo.css'
 
 const NavInfo = props => {
+
+    const { state } = useContext(AuthContext)
+    const { isAuthenticated } = state
+
+    const [register, setRegister] = useState('')
+
+    const checkAuth = () => {
+        if(!isAuthenticated){
+            setRegister(
+                <div className="col-4">
+                    <NavLink to="/register" className="float-right nav-register py-2 px-4">Register or Login</NavLink>
+                </div>)
+        } else{
+            setRegister(null)
+        }
+    }
+
+    useEffect(() => {
+        checkAuth()
+    }, [])
+
+    
+
     return (
         <div className="nav-info">
             <div className="container">
@@ -16,9 +41,7 @@ const NavInfo = props => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-4">
-                        <NavLink to="/login" className="float-right nav-register py-2 px-4">Register or Login</NavLink>
-                    </div>
+                    {register}
                 </div>
             </div>
         </div>

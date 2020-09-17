@@ -11,14 +11,18 @@ import NavSidebar from './NavSidebar'
 const Navbar = props => {
 
     const [headerClass, changeClass] = useState('')
+    const [searchDisplay, setSearchDisplay] = useState('hide')
+
+    const toggleDisplay = () => {
+        console.log('clicked')
+        if( searchDisplay === 'hide' ){
+            setSearchDisplay('show')
+        } else {
+            setSearchDisplay('hide')
+        }
+    }
 
     useEffect(() => {
-        $('.search-box').hide()
-
-        const searchButton = $('.search-button')
-        searchButton.click(function(){
-            $('.search-box').slideToggle( "fast" )
-        })
 
         $('.sidebar-open').click(function(){
             $('.sidebar-menu').css('right', '0')
@@ -54,10 +58,10 @@ const Navbar = props => {
             <NavInfo />
 
             {/* HEADER MAIN NAVBAR */}
-            <NavMenu />
+            <NavMenu toggleDisplay={toggleDisplay} />
             
             {/* HEADER SEARCH BAR */}
-            <NavSearch />
+            <NavSearch displayStyle={searchDisplay} />
             
             {/* HEADER SIDEBAR */}
             <NavSidebar />
