@@ -1,6 +1,7 @@
 import React from 'react'
-import { Map, GoogleApiWrapper } from 'google-maps-react'
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
 
+import Loading from '../Main/Loading'
 import '../../assets/css/Map.css'
 
 const ContactMap = props => {
@@ -13,14 +14,16 @@ const ContactMap = props => {
                     <div className="map_container">
                         <Map
                         google={props.google}
-                        zoom={8}
+                        zoom={12}
                         style={{
                             width: '100%',
                             height: '300px',
                             minWidth: '50%'
                             }}
                         initialCenter={{ lat: 40.3945713, lng: 49.7847483}}
-                        />
+                        >
+                        <Marker name={'Current location'} />
+                        </Map>
                     </div>
                 </div>
             </div>
@@ -31,5 +34,6 @@ const ContactMap = props => {
 }
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA'
+    apiKey: 'AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA',
+    LoadingContainer: Loading
   })(ContactMap);

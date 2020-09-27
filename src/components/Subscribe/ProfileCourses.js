@@ -1,10 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import '../../assets/css/ProfileCourse.css'
 
 import CourseStatus from './CourseStatus'
 import MyCourse from './MyCourse'
-import CourseCard from '../Courses/CourseCard'
 
 import fetchData from '../../utils/fetchData'
 const ProfileCourses = () => {
@@ -37,7 +35,7 @@ const ProfileCourses = () => {
                         price={course.price} 
                         discount
                         students={course.students}
-                            rating={course.rating} />
+                        rating={course.rating} />
                 ))}
             </ul>
         </Fragment>

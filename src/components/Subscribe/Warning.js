@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Required = () => (
+const Warning = ({ message }) => (
   <div className="alert alert-danger mt-4" role="alert">
-    This field is required!
+    {message}
   </div>
 )
 
-export default Required
+export default Warning

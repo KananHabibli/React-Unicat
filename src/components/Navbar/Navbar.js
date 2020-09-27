@@ -8,7 +8,7 @@ import NavMenu from './NavMenu'
 import NavSearch from './NavSearch'
 import NavSidebar from './NavSidebar'
 
-const Navbar = props => {
+const Navbar = () => {
 
     const [headerClass, changeClass] = useState('')
     const [searchDisplay, setSearchDisplay] = useState('hide')

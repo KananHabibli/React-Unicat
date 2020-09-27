@@ -7,9 +7,7 @@ import '../../assets/css/Login.css';
 import app from '../../firebase'
 import { AuthContext } from '../../context/Auth'
 
-
-import Required from './Required';
-import ValidEmail from './ValidEmail'
+import Warning from './Warning'
 
 const Login = ({ history }) => {
 
@@ -36,22 +34,18 @@ const Login = ({ history }) => {
         event.preventDefault();
 
         if(!email){
-            console.log('bp 1')
-            setEmailError(<Required />)
+            setEmailError(<Warning message="This field is required!" />)
             setError(error => [...error, 'email'])
         } else if(!isEmail(email)){
-            console.log('bp 2')
-            setEmailError(<ValidEmail />)
+            setEmailError(<Warning message="This is not a valid email." />)
             setError(error => [...error, 'emailValidation'])
         }
 
         if(!password){
-            console.log('bp 3')
-            setPasswordError(<Required />)
+            setPasswordError(<Warning message="This field is required!" />)
             setError(error => [...error, 'password'])
         }
         if(!error){
-            console.log('bp 4')
             return app
                 .auth()
                 .signInWithEmailAndPassword(email, password)

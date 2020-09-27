@@ -7,10 +7,7 @@ import '../../assets/css/Login.css'
 import app from '../../firebase'
 import fetchData from '../../utils/fetchData'
 
-import ValidEmail from './ValidEmail'
-import Required from './Required'
-import MatchPassword from './MatchPassword'
-
+import Warning from './Warning'
 
 const Register = ({ history }) => {
   const [name, setName] = useState('')
@@ -21,11 +18,13 @@ const Register = ({ history }) => {
   const [city, setCity] = useState('')
   const [country, setCountry] = useState('')
 
-  const [error, setError] = useState('')
+
+  let error = ''
   const [nameError, setNameError] = useState('')
   const [emailError, setEmailError] = useState('')
   const [passwordError, setPasswordError] = useState('')
   const [matchError, setMatchError] = useState('')
+  const [existedUser, setExistedUser] = useState('')
 
   const handleEmail = (e) => {
     setEmailError('')
@@ -65,26 +64,26 @@ const Register = ({ history }) => {
     event.preventDefault();
 
     if(!name){
-      setNameError(<Required />)
-      setError(error => [...error, 'name'])
+      setNameError(<Warning message="This field is required!" />)
+      error = [...error, 'name']
     }
 
     if(!email){
-      setEmailError(<Required />)
-      setError(error => [...error, 'email'])
+      setEmailError(<Warning message="This field is required!" />)
+      error = [...error, 'email']
     } else if(!isEmail(email)){
-      setEmailError(<ValidEmail />)
-      setError(error => [...error, 'emailValidation'])
+      setEmailError(<Warning message="This is not a valid email." />)
+      error = [...error, 'emailValidation']
     }
 
     if(!password){
-      setPasswordError(<Required />)
-      setError(error => [...error, 'password'])
+      setPasswordError(<Warning message="This field is required!" />)
+      error = [...error, 'password']
     }
 
     if(password !== confirmPassword){
-      setMatchError(<MatchPassword />)
-      setError(error => [...error, 'matchError'])
+      setMatchError(<Warning message="Passwords must match." />)
+      error = [...error, 'matchError']
     }
 
     if(!error){
@@ -99,7 +98,7 @@ const Register = ({ history }) => {
           });
         history.push("/login");
       } catch (error) {
-        console.log(error)
+        setExistedUser(<Warning message="User already exists!" />)
       }
     }
   };
@@ -121,6 +120,9 @@ const Register = ({ history }) => {
                 Register Form
             </div>
             <form onSubmit={handleSignUp}>
+                <div>
+                  {existedUser}
+                </div>
                 <div>
                     <label htmlFor="name">Full Name</label>
                     <input className="register-form-input" name="name" type="text" placeholder="John Doe" value={name} onChange={e => handleName(e)}  />

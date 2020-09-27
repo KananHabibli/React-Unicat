@@ -2,7 +2,7 @@
 .reason{
     width: 100%;
     padding: 100px 0;
-    background-image: url('/images/courses_background.jpg');
+    background-image: url('/images/courses_background.jpg') !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -2,7 +2,7 @@ import React from 'react'
 
 import "../../assets/css/Login.css"
 import "../../assets/css/ProfileAccount.css"
-const Account = ({email, name, city, country, date}) => (
+const Account = ({email, name, city, country}) => (
     <div className="profile-account">
         <div className="account-item my-4">
             <label htmlFor="name" className="account-label">Your Name</label>

@@ -7,7 +7,7 @@ const ContactInfo = props => {
         <div className="contact-info">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6  mt-4">
                         <div className="contact-form">
                             <div className="contact-form-title">
                                 Contact Form
